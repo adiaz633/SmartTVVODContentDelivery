@@ -1,0 +1,1061 @@
+{
+    "keyboards": {
+        "searchkb": {
+            "id": "search_kb",
+            "class": "search-tv__kb",
+            "mayInic": true,
+            "mayMin": true,
+            "panels": [
+                {
+                    "rows": [
+                        {
+                            "keys": [
+                                {
+                                    "value": "espacio"
+                                },
+                                {
+                                    "value": "1"
+                                },
+                                {
+                                    "value": "2"
+                                },
+                                {
+                                    "value": "3"
+                                },
+                                {
+                                    "value": "4"
+                                },
+                                {
+                                    "value": "5"
+                                },
+                                {
+                                    "value": "6"
+                                },
+                                {
+                                    "value": "7"
+                                },
+                                {
+                                    "value": "8"
+                                },
+                                {
+                                    "value": "9"
+                                },
+                                {
+                                    "value": "0"
+                                },
+                                {
+                                    "value": "ç"
+                                },
+                                {
+                                    "value": "%"
+                                },
+                                {
+                                    "value": "&"
+                                },
+                                {
+                                    "value": ":"
+                                },
+                                {
+                                    "value": "-"
+                                },
+                                {
+                                    "value": "borrar"
+                                }
+                            ]
+                        },
+                        {
+                            "keys": [
+                                {
+                                    "value": "a",
+                                    "foco": true
+                                },
+                                {
+                                    "value": "b"
+                                },
+                                {
+                                    "value": "c"
+                                },
+                                {
+                                    "value": "d"
+                                },
+                                {
+                                    "value": "e"
+                                },
+                                {
+                                    "value": "f"
+                                },
+                                {
+                                    "value": "g"
+                                },
+                                {
+                                    "value": "h"
+                                },
+                                {
+                                    "value": "i"
+                                },
+                                {
+                                    "value": "j"
+                                },
+                                {
+                                    "value": "k"
+                                },
+                                {
+                                    "value": "l"
+                                },
+                                {
+                                    "value": "m"
+                                },
+                                {
+                                    "value": "n"
+                                },
+                                {
+                                    "value": "ñ"
+                                },
+                                {
+                                    "value": "o"
+                                },
+                                {
+                                    "value": "p"
+                                },
+                                {
+                                    "value": "q"
+                                },
+                                {
+                                    "value": "r"
+                                },
+                                {
+                                    "value": "s"
+                                },
+                                {
+                                    "value": "t"
+                                },
+                                {
+                                    "value": "u"
+                                },
+                                {
+                                    "value": "v"
+                                },
+                                {
+                                    "value": "w"
+                                },
+                                {
+                                    "value": "x"
+                                },
+                                {
+                                    "value": "y"
+                                },
+                                {
+                                    "value": "z"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "altsymkb": {
+            "id": "search_kb",
+            "class": "search-tv__kb",
+            "mayInic": true,
+            "mayMin": true,
+            "panels": [
+                {
+                    "type": "letters_numbers",
+                    "symbol": "Ab1",
+                    "rows": [
+                        {
+                            "keys": [
+                                {
+                                    "value": "espacio"
+                                },
+                                {
+                                    "value": "1"
+                                },
+                                {
+                                    "value": "2"
+                                },
+                                {
+                                    "value": "3"
+                                },
+                                {
+                                    "value": "4"
+                                },
+                                {
+                                    "value": "5"
+                                },
+                                {
+                                    "value": "6"
+                                },
+                                {
+                                    "value": "7"
+                                },
+                                {
+                                    "value": "8"
+                                },
+                                {
+                                    "value": "9"
+                                },
+                                {
+                                    "value": "0"
+                                },
+                                {
+                                    "value": "borrar"
+                                }
+                            ]
+                        },
+                        {
+                            "keys": [
+                                {
+                                    "value": "a",
+                                    "foco": true,
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "a"
+                                        },
+                                        {
+                                            "value": "á"
+                                        },
+                                        {
+                                            "value": "à"
+                                        },
+                                        {
+                                            "value": "ä"
+                                        }
+                                    ] 
+                                },
+                                {
+                                    "value": "b",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "b"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "c",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "c"
+                                        },
+                                        {
+                                            "value": "ç"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "d",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "d"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "e",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "e"
+                                        },
+                                        {
+                                            "value": "é"
+                                        },
+                                        {
+                                            "value": "è"
+                                        },
+                                        {
+                                            "value": "ë"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "f",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "f"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "g",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "g"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "h",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "h"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "i",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "i"
+                                        },
+                                        {
+                                            "value": "í"
+                                        },
+                                        {
+                                            "value": "ì"
+                                        },
+                                        {
+                                            "value": "ï"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "j",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "j"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "k",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "k"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "l",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "l"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "m",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "m"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "n",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "n"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "ñ",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "ñ"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "o",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "o"
+                                        },
+                                        {
+                                            "value": "ó"
+                                        },
+                                        {
+                                            "value": "ò"
+                                        },
+                                        {
+                                            "value": "ö"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "p",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "p"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "q",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "q"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "r",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "r"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "s",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "s"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "t",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "t"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "u",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "u"
+                                        },
+                                        {
+                                            "value": "ú"
+                                        },
+                                        {
+                                            "value": "ù"
+                                        },
+                                        {
+                                            "value": "ü"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "v",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "v"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "w",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "w"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "x",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "x"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "y",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "y"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "z",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "z"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "symbols",
+                    "symbol": "@/.",
+                    "rows": [
+                        {
+                            "keys": [
+                                {
+                                    "value": "espacio",
+                                    "foco": true
+                                },
+                                {
+                                    "value": "."
+                                },
+                                {
+                                    "value": "-"
+                                },
+                                {
+                                    "value": "_"
+                                },
+                                {
+                                    "value": "#"
+                                },
+                                {
+                                    "value": "@"
+                                },
+                                {
+                                    "value": "?"
+                                },
+                                {
+                                    "value": "¿"
+                                },
+                                {
+                                    "value": "^"
+                                },
+                                {
+                                    "value": "["
+                                },
+                                {
+                                    "value": "]"
+                                },
+                                {
+                                    "value": "borrar"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "altkb": {
+            "id": "search_kb",
+            "class": "search-tv__kb",
+            "mayInic": true,
+            "mayMin": true,
+            "panels": [
+                {
+                    "rows": [
+                        {
+                            "keys": [
+                                {
+                                    "value": "espacio"
+                                },
+                                {
+                                    "value": "1"
+                                },
+                                {
+                                    "value": "2"
+                                },
+                                {
+                                    "value": "3"
+                                },
+                                {
+                                    "value": "4"
+                                },
+                                {
+                                    "value": "5"
+                                },
+                                {
+                                    "value": "6"
+                                },
+                                {
+                                    "value": "7"
+                                },
+                                {
+                                    "value": "8"
+                                },
+                                {
+                                    "value": "9"
+                                },
+                                {
+                                    "value": "0"
+                                },
+                                {
+                                    "value": "borrar"
+                                }
+                            ]
+                        },
+                        {
+                            "keys": [
+                                {
+                                    "value": "a",
+                                    "foco": true,
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "a"
+                                        },
+                                        {
+                                            "value": "á"
+                                        },
+                                        {
+                                            "value": "à"
+                                        },
+                                        {
+                                            "value": "ä"
+                                        }
+                                    ] 
+                                },
+                                {
+                                    "value": "b",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "b"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "c",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "c"
+                                        },
+                                        {
+                                            "value": "ç"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "d",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "d"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "e",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "e"
+                                        },
+                                        {
+                                            "value": "é"
+                                        },
+                                        {
+                                            "value": "è"
+                                        },
+                                        {
+                                            "value": "ë"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "f",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "f"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "g",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "g"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "h",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "h"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "i",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "i"
+                                        },
+                                        {
+                                            "value": "í"
+                                        },
+                                        {
+                                            "value": "ì"
+                                        },
+                                        {
+                                            "value": "ï"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "j",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "j"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "k",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "k"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "l",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "l"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "m",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "m"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "n",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "n"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "ñ",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "ñ"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "o",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "o"
+                                        },
+                                        {
+                                            "value": "ó"
+                                        },
+                                        {
+                                            "value": "ò"
+                                        },
+                                        {
+                                            "value": "ö"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "p",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "p"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "q",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "q"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "r",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "r"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "s",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "s"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "t",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "t"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "u",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "u"
+                                        },
+                                        {
+                                            "value": "ú"
+                                        },
+                                        {
+                                            "value": "ù"
+                                        },
+                                        {
+                                            "value": "ü"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "v",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "v"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "w",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "w"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "x",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "x"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "y",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "y"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "z",
+                                    "alt": [
+                                        {
+                                            "value": "shift"
+                                        },
+                                        {
+                                            "value": "z"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]         
+        },
+        "pin": {
+            "id": "pin_kb",
+            "class": "search-tv__kb",
+            "panels": [
+                {
+                    "rows": [
+                        {
+                            "keys": [
+                                {
+                                    "value": "1",
+                                    "foco": true
+                                },
+                                {
+                                    "value": "2"
+                                },
+                                {
+                                    "value": "3"
+                                },
+                                {
+                                    "value": "4"
+                                },
+                                {
+                                    "value": "5"
+                                },
+                                {
+                                    "value": "6"
+                                },
+                                {
+                                    "value": "7"
+                                },
+                                {
+                                    "value": "8"
+                                },
+                                {
+                                    "value": "9"
+                                },
+                                {
+                                    "value": "0"
+                                },
+                                {
+                                    "value": "borrar"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "empty": {
+            
+        }
+    }
+}

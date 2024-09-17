@@ -1,0 +1,1158 @@
+#kb-modal-profile.modalscene {
+	background-color: rgba(0,0,0,.8);
+	z-index: 99;
+}
+
+.modalscene.little-modal .modal {
+	position: absolute;
+	top: 199px; /* de 270 a 286.5 modal/perfiles */
+	left: 302px; /* de 230 a 248.5 modal/perfiles */
+	width: 1317px; /* de 1460 a 1423 modal/perfiles 1317 */
+	height: 711px; /* de 510 a 507 modal/perfiles 682  pin parental/ajustes 584, de 683 a 711 */
+	margin: 0px;
+	padding: 82px 242px 85px 250px; /* de 107px 242px 110px 250px a 82px 242px 85px 250px */
+	background: rgba(28, 28, 28, 0.95);
+	color: #fff;
+	display: block;
+	border-radius: 10px;
+  }
+
+  /*.modalscene.little-modal.little-error.forget .modal {
+    height: 584px;
+	top: 248px;
+}*/
+  .modalscene .modal .text {
+	text-align: center;
+	width: 100%;
+	padding-left: 50px;
+	padding-right: 50px;
+  }
+
+  .settings-keyboard-comp .modalscene .modal .text .titulo {
+    font-size: 40px;
+    font-weight: 200;
+    letter-spacing: -0.69px;
+    margin-bottom: 0;
+    margin-top: 85px;
+}
+
+.modalscene .modal .text#wrap-error-msg .titulo, .modalscene .modal .text#wrap-error-msg .descripcion {
+    font-size: 30px;
+}
+
+  .modalscene .modal .text .titulo, .modalscene .modal .text .subtitulo {
+	padding-top: 0;
+	font-family: var(--font-primary200);
+	font-style: normal;
+	font-weight: 200;
+	font-size: 55px;
+	margin-bottom: 33px;
+	margin-top: 95px;
+  }
+
+  .modalscene.little-modal .modal .text .titulo {
+	font-size: 40px;
+	opacity: 0.5;
+	margin-top: 0; /* 15839 de 111 a 0 para titulo */
+	margin-bottom: 34px; /* de 51 a 34 al ajus dif desco / TV */
+  }
+
+  .modalscene .modal .text .subtitulo {
+    font-size: 30px;
+    margin: 0;
+  }
+
+  .modalscene .modal .text .descripcion {
+	font-family: var(--font-primary200);
+	font-style: normal;
+	font-weight: 200;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    font-size: 26px;
+    color: #ABABAB;
+  }
+
+  .modalscene .modal .text #kb-modal-msg-title {
+	color: red;
+  }
+
+  .modalscene .modal .text .descripcion strong {
+	font-weight: 400;
+  }
+
+  .modalscene .modal .text .descripcion.bold {
+	font-weight: 500;
+  }
+
+
+  .modalscene .modal .buttons {
+	text-align: center;
+	padding-top: 2px;
+	/*padding-bottom: 130px;*/
+    padding-top: 110px;
+  }
+
+  .settings-keyboard-comp .modalscene .modal .buttons {
+    padding-bottom: 100px;
+}
+
+  .modalscene .modal .buttons .button {
+	font-weight: inherit;
+	letter-spacing: -1px;
+	border-color: #393939;
+	border-radius: 5px;
+	background: #393939;
+	height: 63px;
+	color: #fff;
+	font-family: var(--font-primary200);
+	font-style: normal;
+	font-weight: 300;
+	font-size: 28px;
+	display: inline-block;
+	vertical-align: middle;
+	opacity: 1;
+	padding: 13px 40px 10px;
+	margin-right: 18px;
+    min-width: 364px; /* nuevo popup teclado */
+  }
+
+  .modalscene .modal .buttons .button.circular {
+	padding: 13px 80px 10px 40px;
+  }
+
+  .modalscene .modal .buttons .button.active {
+	background: var(--color-corporate);
+	border-color: var(--color-corporate);
+  }
+
+  .modalscene.little-modal .modal .buttons .button.active {
+    background: var(--color-corporate);
+    border-color: var(--color-corporate);
+}
+
+  .modalscene .modal .buttons .button.disabled {
+	opacity: 0.25!important;
+    pointer-events: none!important;
+  }
+
+  .hover_yes .modalscene .modal .buttons .button:hover {
+	border-color: #ffffff;
+	transform: scale(1.15);
+	color: #ffffff;
+	transform: scale(1.15);
+  }
+
+  .hover_yes .modalscene .modal .buttons .button.active:hover {
+	border-color: #ffffff;
+	transform: scale(1.15);
+  }
+
+  .modalscene.little-modal .modal .user-pin-key {
+	text-align: center;
+	margin: 0; /* de 46px 0 0 a 0 ajuste en padre */
+  }
+
+  .modalscene.little-modal .modal .user-pin-key__li {
+	width: 90px;
+	height: 90px;
+	border-radius: 8px;
+	display: inline-block;
+	margin-right: 20px;
+  }
+
+  .modalscene.little-modal .modal .user-pin-key__li:last-child {
+	margin-right: 0;
+  }
+
+  .modalscene.little-modal .modal .user-pin-key__input {
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+	background-color: rgba(108, 108, 108, 0.3);
+	border: none;
+	text-align: center;
+	font-size: 1.5em;
+	color: #fff;
+    -webkit-text-stroke-width: 0.2em;
+  }
+
+  .modalscene.little-modal .modal .user-pin-key__input.active {
+    /* outline: 5px solid var(--color-corporate); no compatible */
+    box-shadow: 0 0 0 5px var(--color-corporate);
+}
+
+  .modalscene.little-modal.little-error.focus-error .modal .user-pin-key__input {
+    box-shadow: 0 0 0 5px red;
+}
+
+  .modalscene.little-modal .modal .user-pin--keyboard {
+	margin-bottom: 96px;
+  }
+
+  .user-pin-key__li {
+	width: 57px;
+	height: 57px;
+	border-radius: 8px;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 42px;
+	font-weight: 200;
+	line-height: 55px;
+	margin-right: 5px;
+  }
+
+  .user-pin-key__li.active {
+	font-weight: 400;
+  }
+
+  .modalscene.little-modal .modal .buttons {
+	padding: 0;
+	margin: 0 auto;
+  }
+
+  .modalscene.little-modal .modal .buttons .button {
+	min-width: 364px;
+    background: rgba(74, 74, 74, .8);
+  }
+
+  /* --------- */
+
+#kb-modal-profile.little-modal {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 1920px;
+	height: 1080px;
+	background-color: transparent;
+	z-index: 11;
+}
+
+#kb-modal-profile:not(.little-modal) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: rgba(0,0,0,.8);
+    color: #FFF;
+    font-family: var(--font-primary200);
+    z-index: 100;
+}
+
+.modalscene.little-modal {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1920px;
+    height: 1080px;
+    background-color: transparent;
+    z-index: 11;
+}
+
+.modalscene:not(.little-modal) .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 76%;
+    transform: translate(-50%, -50%);
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* modal flex pin parental y codigo QR */
+
+.modalscene.little-modal.m-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .modalscene.little-modal.m-flex .modal {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 1317px;
+    height: auto;
+    text-align: center;
+  }
+
+  .modalscene.little-modal.m-flex .search-tv__kb .kb_wrap {
+      position: relative;
+      left: auto;
+      transform: none;
+      display: inline-block;
+      top: auto;
+      margin-bottom: 102px;
+      margin-top: 64px;
+  }
+
+  .modalscene.little-modal.m-flex .search-tv__kb .button_kb_wrap {
+    position: relative;
+    top: auto;
+  }
+
+  .modalscene.little-modal.m-flex .modal .text#text-wrap {
+      position: relative;
+      left: auto;
+      top: auto;
+      transform: none;
+  }
+
+  .modalscene.little-modal.m-flex .modal .kb-modal-keyboard + .text {
+    margin-top: 86px;
+    display: inline-block;
+}
+
+  .modalscene.m-flex.little-error .modal .text#wrap-error-msg{
+    transform: none;
+    margin-top: 21px;
+    margin-bottom: 0;
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  .modalscene.m-flex.little-error .search-tv__kb .kb_wrap{
+      margin-bottom: 48px;
+      margin-top: 30px;
+  }
+
+  .modalscene.m-flex.little-modal.little-error .search-tv__kb .kb_wrap {
+    top: auto;
+}
+
+
+/* CABECERA*/
+
+/*#profilesKb .modal .cabecera {
+	top: 80px;
+	width: 100%;
+	height: 141px;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+} borrar */
+
+#kb-modal-titulo {
+	top: 18px;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 32pt;
+}
+
+#profilesKb .modal #kb-modal-text-title {
+	/*top: 75px;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	font-style: normal;
+	font-weight: 100;
+	font-size: 28pt; borrar */
+
+	margin: 0px;
+    padding: 0px;
+    font-weight: 200;
+    font-size: 40px;
+	text-align: center;
+}
+
+/* CUERPO */
+
+.kb-modal-keyboard {
+	position: relative;
+    margin-top: 26px;
+}
+
+.modalscene.little-modal .kb-modal-keyboard {
+    margin: 0 0 91px;
+    display: inline-block;
+}
+
+.modalscene.little-modal.little-error .kb-modal-keyboard {
+    margin-bottom: 0;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard {
+	/*position: absolute;
+    top: 120px;
+    left: 110px;
+	margin: 0px;
+	padding: 0px; borrado */
+	margin-top: 63px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row {
+	/*clear: both;
+	width: 1100px;
+	margin: 0px;
+	padding: 0px;
+	height: 99px; borrar */
+	display: flex;
+    justify-content: center
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row:first-child {
+    border: 1px solid #fff;
+    width: 174px;
+    margin: 0 auto;
+    border-radius: 8px;
+	height: 48px;
+	margin-bottom: 34px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row:first-child + .kb_row {
+    margin-bottom: 21px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row:last-child {
+    position: absolute;
+    top: 496px;
+    width: 100%;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key.key_ext {
+    /* position: relative;
+    float: left;  borrar */
+    width: 50%;
+    height: 100%;
+    font-size: 27px;
+    font-weight: 300;
+    border-radius: 8px 0 0 8px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key.key_ext.selected:not(.key_esp):not(.icon-kbdel) {
+    border-radius: 8px 0  0 8px;
+	background-color: #C2C2C2;
+    color: var(--palette-black);
+	box-sizing: content-box;
+    margin-left: -1px;
+    margin-top: -1px;
+    border: 1px solid #C2C2C2;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key + .key.key_ext.selected:not(.key_esp):not(.icon-kbdel) {
+    margin-right: -1px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key.key_ext.activo:not(.key_esp):not(.icon-kbdel) {
+	background-color: var(--color-corporate);
+    border: 1px solid var(--color-corporate);
+    box-sizing: content-box;
+    margin-left: -1px;
+    margin-top: -1px;
+    color: #fff;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key + .key_ext.activo:not(.key_esp):not(.icon-kbdel) {
+    margin-right: -1px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key.key_ext + .key.key_ext:not(.key_esp):not(.icon-kbdel) {
+    border-radius: 0 8px 8px 0;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key.key_ext.activo:not(.key_esp):not(.icon-kbdel) {
+    border-radius: 8px 0 0 8px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key {
+	/*position: relative;
+	float: left;
+	width: 40px;
+	height: 40px;
+	margin: 0px;
+	padding: 0px; borrar */
+	margin-left: 0;
+    width: 52px;
+    height: 52px;
+    font-size: 40px;
+    padding-top: 0px;
+    padding-left: 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+	position: relative;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row:first-child + .kb_row .key:last-child {
+    width: calc(52px * 2);
+    position: relative;
+    padding: 0 25px 0 25px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row:first-child + .kb_row .key:last-child:before {
+	content: "x";
+	border: 5px solid transparent;
+	border-radius: 8px;
+	height: 36px;
+   width: 39px;
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    box-sizing: border-box;
+    font-family: var(--font-primary200);
+    z-index: 9;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: normal;
+    border-width: 2px 2px 2px 0;
+    border-color: #ffffff;
+    border-style: solid;
+	margin: 0 25px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row:first-child + .kb_row .key.activo:last-child:before {
+    background-color: var(--color-corporate);
+    border-color: var(--color-corporate);
+    left: 10px;
+    font-weight: 500;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row:first-child + .kb_row .key:last-child:after {
+    content: "";
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    left: -1px;
+    top: 14px;
+    box-sizing: border-box;
+    transform: rotate(315deg) skewX(-10deg) skewY(-10deg);
+    border-radius: 7px;
+    border: none;
+	border-left: 2px solid #fff;
+	border-top: 2px solid #fff;
+	margin: 0 25px;
+}
+
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row:first-child + .kb_row .key.activo:last-child:after {
+    background-color: var(--color-corporate);
+    border-color: var(--color-corporate);
+    left: 2px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row:first-child + .kb_row .key.activo:last-child {
+    background-color: transparent;
+}
+
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key.key_esp {
+	/* width: 220px; borrar */
+	width: calc(52px * 3);
+    font-size: 24px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key.key_esp:after {
+    content: "ESPACIO";
+    position: absolute;
+    width: 121px;
+    height: 38px;
+    border: 1.8px solid #fff;
+    box-sizing: border-box;
+    border-radius: 4.5px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key.key_esp.activo:after {
+    background-color: var(--color-corporate);
+    border: none;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key.activo:not(.key_esp):not(.icon-kbdel) {
+    background-color: var(--color-corporate);
+    border-radius: 8px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .esp_block_kb_row {
+	display: none;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .esp_block_kb_row.keySelected {
+	/*display: block; borrar */
+	display: flex;
+    position: absolute;
+    left: 26px;
+    transform: translate(-50%, 21px);
+    padding: 5px;
+    background-color: #333;
+    border-radius: 6px;
+	top: 100%;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .esp_block_kb_row.keySelected:after {
+    content: "";
+    position: absolute;
+    top: -26px;
+    right: calc(50% - 13px);
+    margin-left: -5px;
+    border-width: 13px;
+    border-style: solid;
+    border-color: transparent transparent #323232 transparent;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .esp_block_kb_row.keySelected .key:first-child:after {
+    content: "\e9d8";
+    font-family: 'icomoon';
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .esp_block_kb_row.keySelected .key.uppercase:first-child:before {
+    content: "\e9d6";
+    font-family: 'icomoon';
+    position: absolute;
+}
+
+#kb-modal-keyboard .kb_row.shift .alt_row.selected .key:first-child:before {
+    content: "\e9d6";
+    font-family: 'icomoon';
+    position: absolute;
+}
+
+#kb-modal-keyboard .kb_row .alt_row.selected .key:first-child:after {
+    content: "\e9d8";
+    font-family: 'icomoon';
+}
+
+/*#kb-modal-keyboard #kb-modal-keyboard .kb_row .key_ext {
+	position: relative;
+	float: left;
+	width: 192px;
+	height: 96px;
+	margin: 0px;
+	padding: 0px;
+} borrar */
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key .btn {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key .index {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	opacity: 0;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key.activo .index {
+	opacity: 1;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key_ext .btn {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key_ext .index {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin-left: 2px;
+	margin-top: 2px;
+	padding: 0px;
+	opacity: 0;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key_ext.activo .index {
+	opacity: 1;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key .char {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 65px;
+    font-size: 40pt;
+    color: #FFF;
+    font-family: var(--font-primary200);
+    font-weight: 300;
+}
+
+/*#kb-modal-keyboard #kb-modal-keyboard .kb_row .key.activo .char {
+	color: #FFF;
+	background: var(--color-corporate);
+	border-radius: 5px;
+} borrar */
+
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key_ext .symbol {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key_enter {
+	width: 364px;
+    height: 63px;
+    background-color: #4A4A4A;
+    border-radius: 8px;
+    font-size: 28px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key_enter .btn {
+	position: absolute;
+	margin: 0px;
+	padding: 0px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key_enter .index {
+	position: absolute;
+	margin-left: 2px;
+	margin-top: 2px;
+	padding: 0px;
+	opacity: 0;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key_enter.activo .index {
+	opacity: 1;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key .symbol {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	opacity: 1;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key .symbol-a {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	opacity: 0;
+	background: var(--color-corporate);
+	border-radius: 5px;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key_ext .symbol {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	opacity: 1;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key_ext.activo .symbol-a {
+	position: absolute;
+	margin: 0px;
+	padding: 0px;
+	opacity: 1;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key.activo .symbol {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	opacity: 0;
+}
+
+#kb-modal-keyboard #kb-modal-keyboard .kb_row .key.activo .symbol-a {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	opacity: 1;
+}
+
+#kb-modal-keyboard .input-text {
+    /*position: absolute;
+    left: 250px;
+    height: 96px;
+    width: 780px; borrar */
+
+	margin: 0 auto;
+    height: 90px;
+    width: 728px;
+    padding: 0;
+    background-color: rgba(108, 108, 108, .27);
+    border-radius: 8px;
+	text-align: center;
+    font-size: 26px;
+    padding-top: 0; /* de 20 a 0 tras flex */
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: -webkit-flex;
+}
+
+#kb-modal-keyboard .input-text .input {
+    border: none;
+}
+
+#kb-modal-keyboard .input-text #span_input {
+    font-size: 45px;
+    direction: ltr;
+}
+
+#kb-modal-keyboard .input-text #span_input.encrypted {
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+#span_input.encrypted .search-tv__inputCursor {
+    vertical-align: 4px;
+    font-weight: 200;
+}
+
+#kb-modal-keyboard .input-text .btn {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#kb-modal-keyboard .input-text .text .cursor {
+	position: absolute;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+/* mio nuevo */
+.modalscene  .kb_wrap {
+    position: relative;
+	margin-top: 63px;
+}
+
+.modalscene:not(.little-modal) .kb_row.tabs-nav {
+    border: 1px solid #fff;
+    width: 174px;
+    margin: 0 auto;
+    border-radius: 8px;
+    height: 48px;
+    margin-bottom: 34px;
+}
+
+.modalscene .kb_row.tabs-nav .key_ext {
+	width: 50%;
+    height: 100%;
+    font-size: 27px;
+    font-weight: 300;
+    border-radius: 8px 0 0 8px;
+}
+
+.modalscene .kb_row.tabs-nav .key_ext.selected {
+	border-radius: 8px 0 0 8px;
+    background-color: #C2C2C2;
+    color: var(--palette-black);
+    box-sizing: content-box;
+    margin-left: -1px;
+    margin-top: -1px;
+    border: 1px solid #C2C2C2;
+}
+
+.modalscene .kb_row.tabs-nav .key_ext.activo {
+    background-color: var(--color-corporate);
+    border: 1px solid var(--color-corporate);
+    box-sizing: content-box;
+    margin-left: -1px;
+    margin-top: -1px;
+    color: #fff;
+}
+
+#profilesKb .popup .cuerpo .key_ext {
+    border-radius: 8px 0 0 8px;
+}
+
+.search-tv__kb .kb_row:first-child  + .kb_row {
+    margin-top: 0;
+    margin-left: auto;
+    margin-bottom: 21px;
+}
+
+.modalscene .kb_row .key.selected:not(.key_esp):not(.icon-kbdel) {
+    border-radius: 8px 0 0 8px;
+    background-color: #C2C2C2;
+    color: var(--palette-black);
+    box-sizing: content-box;
+    margin-left: -1px;
+    margin-top: -1px;
+    border: 1px solid #C2C2C2;
+}
+
+.modalscene .kb_row .key.key_ext {
+    width: 50%;
+    height: 100%;
+    font-size: 27px;
+    font-weight: 300;
+    border-radius: 8px 0 0 8px;
+}
+
+.modalscene .alt_row {
+    display: none;
+}
+
+.modalscene .alt_row.selected {
+    display: flex;
+    position: absolute;
+    left: 26px;
+    transform: translate(-50%, 0px);
+    padding: 5px;
+    background-color: #333;
+    border-radius: 6px;
+    top: 100%;
+    -webkit-transform: translate(-50%, 0px);
+    -moz-transform: translate(-50%, 0px);
+    -ms-transform: translate(-50%, 0px);
+    -o-transform: translate(-50%, 0px);
+}
+
+.modalscene .alt_row.selected:after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    right: calc(50% - 13px);
+    margin-left: -5px;
+    border-width: 13px;
+    border-style: solid;
+    border-color: transparent transparent #323232 transparent;
+}
+
+.modalscene .alt_row .key:first-child:after {
+    content: "\e9d8";
+    font-family: 'icomoon';
+}
+
+/* estilos para pin incorrecto */
+
+.modalscene.little-modal .search-tv__kb .button_kb_wrap {
+    position: absolute;
+    top: 304px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.modalscene .modal .text#wrap-error-msg {
+    padding: 0;
+    font-size: 30px;
+    text-align: center;
+    width: auto;
+    opacity: 0;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.modalscene.little-error .modal .text#wrap-error-msg {
+    opacity: 1;
+}
+
+.modalscene .modal .text#wrap-error-msg .titulo {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    font-weight: 300;
+}
+
+.modalscene .modal .text#wrap-error-msg .descripcion {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+.modalscene .modal .text#text-wrap {
+    opacity: 1; /* sin forget paso de 0 a 1 */
+	position: absolute;
+    top: 232px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/*.modalscene.forget .modal .text#text-wrap {
+    opacity: 1;
+}*/
+
+.modalscene .modal .text#text-wrap .titulo {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    opacity: 1;
+}
+
+.modalscene .modal .text#text-wrap .descripcion {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    font-size: 23px;
+    opacity: .7;
+}
+
+.modalscene.little-modal.little-error .search-tv__kb .kb_wrap {
+    top: 212px;
+}
+
+/*.modalscene.little-modal.forget .search-tv__kb .button_kb_wrap {
+    opacity: 0;
+}*/
+
+/* estilos para smart TV esta opcion incluye teclado y botones no como en STB */
+.modalscene.little-modal.m-flex.no-stb .modal .kb-modal-keyboard + .text {
+    margin-top: 33px;
+    display: inline-block;
+}
+
+.modalscene.little-modal.no-stb .kb-modal-keyboard {
+    margin-bottom: 0;
+}
+
+.modalscene.little-modal.m-flex.no-stb .search-tv__kb .kb_wrap {
+    margin-bottom: 36px;
+    margin-top: 122px;
+}
+
+.modalscene.little-modal.little-error.no-stb .kb-modal-keyboard {
+    margin-bottom: 0;
+}
+
+.modalscene.little-modal.m-flex.no-stb.little-error .search-tv__kb .kb_wrap {
+    margin-top: 31px;
+}
+
+/* END estilos para smart TV esta opcion incluye teclado y botones no como en STB */
+
+/* estilos para nueva implementación de teclado en perfiles tiende a ser el comun perfiles/ajustes de momento */
+
+.modalscene.fullscreen-modal .modal {
+    width: 100vw;
+    height: 100vh;
+}
+
+.modalscene.fullscreen-modal .modal .text .titulo {
+    margin: 0;
+    font-size: 40px;
+}
+
+.modalscene .search-tv__kb .kb_row.switch_row {
+    /*border: 1px solid #fff; */
+    width: 174px;
+    margin: 0 auto;
+    border-radius: 8px;
+    height: 48px;
+    margin-bottom: 34px;
+}
+
+.search-tv__kb .kb_row .key.key_security {
+    width: 107px;
+    height: 100%;
+    background: url(./../../../images/svg_images/ico_ojo.svg) no-repeat center;
+    border: none;/* de 1px solid #C2C2C2 a none  */
+    border-radius: 8px;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+}
+
+.modalscene .search-tv__kb .kb_row .key.key_security.activo{
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+.modalscene .search-tv__kb .kb_row.switch_row {
+    width: 261px;
+}
+
+.modalscene .kb_row.switch_row .key.key_ext + .key.key_ext,
+.modalscene .kb_row.switch_row .key.key_ext:not(.activo) {
+    border: 1px solid #C2C2C2;
+}
+
+.search-tv__kb .kb_row .key.key_security.off {
+    background: url(./../../../images/svg_images/ico_ojoRemove.svg) no-repeat center;
+}
+
+.modalscene .kb_row.switch_row .key.key_ext.activo, .search-tv__kb .kb_row .key.key_security.activo {
+    border-radius: 8px 0 0 8px;
+    color: #fff;
+    box-sizing: content-box;
+    margin-left: -1px;
+    margin-top: 0;
+    border: 1px solid var(--color-corporate);
+    background-color: var(--color-corporate);
+    font-weight: 500;
+}
+
+.modalscene .kb_row.switch_row .key.key_ext + .key.key_ext.activo {
+    margin-top: 0;
+    border: 1px solid var(--color-corporate);
+    background-color: var(--color-corporate);
+}
+
+.modalscene .kb_row.switch_row .key.key_ext + .key.key_ext {
+    border-radius: 0 8px 8px 0;
+    box-sizing: content-box;
+    margin-left: -0.5px;
+    position: relative;
+    left: 0.5px;
+}
+
+.modalscene .kb_row.switch_row .key.activo{
+    background-color: var(--color-corporate);
+    font-weight: 500;
+    border: 1px solid var(--color-corporate);
+    color: #fff;
+    margin-left: -1px;
+    margin-top: -1px;
+    box-sizing: content-box;
+    border-radius: 8px 0 0 8px;
+}
+
+.modalscene.little-modal .text {
+  margin-top: 25px;
+}
+
+.footer-inside {
+  margin-top: 25px;
+  color: rgba(168,168,168,1);
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 28px;
+}
+.footer-inside__p {
+    color: rgba(255,255,255,1);
+    font-size: 30px;
+    font-weight: 300;
+    margin: 2px 0;
+    line-height: 32px;
+}
+.footer-inside__p-small {
+    margin: 0;
+}
+/* END estilos para nueva implementación de teclado en perfiles tiende a ser el comun perfiles/ajustes de momento */

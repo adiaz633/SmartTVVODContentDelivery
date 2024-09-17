@@ -1,0 +1,1098 @@
+/*****************************
+* Series
+*/
+
+.skeleton[data-slider="series"] {
+	position: relative;
+	z-index: 9;
+	padding: 0 100px;
+	max-width: 100%;
+	overflow: hidden;
+	height: 366px !important; /* 304px!important;*/
+}
+
+.slider-wrap[data-slider="series"] {
+  position: relative;
+  top: 0; /* de top -35 top 0 rfc */
+  z-index: 9;
+  max-width: 100%;
+  height: auto; /* de 366 a auto rfc */
+}
+
+.slider-item-multiple .slider-wrap[data-slider=series],[data-slider=movies],[data-slider=nodes] {
+  margin-top: 25px;
+}
+
+.slider-wrap[data-slider="series"] .slider-count {
+	position: absolute;
+	display: none;
+	top: -60px; /* de 1px a -60px */
+	right: 140px;
+	text-align: right;
+	font-size: 30px;
+	font-weight: 200;
+	letter-spacing: .83px;
+}
+.slider-wrap[data-slider="series"] .slider-count .current {
+	margin-right: .2em;
+	font-weight: 500;
+}
+.slider-wrap[data-slider="series"] .slider-count .total {
+	margin-left: .2em;
+	/*font-weight: 500; anulo bold en 1 de "15" para revision 00 */
+}
+
+.slider-wrap[data-slider="series"] .items {
+	white-space: nowrap;
+
+	-webkit-transition: transform .6s;
+	-moz-transition: transform .6s;
+	-o-transition: transform .6s;
+	transition: transform .6s;
+
+	transition-timing-function: ease-out;
+}
+
+.slider-wrap[data-slider="series"] .items.circular {
+	margin-left: -838px;
+}
+.slider-wrap[data-slider="series"] .items:not(.circular) {
+	margin-left: -838px;
+}
+
+.slider-wrap[data-slider="series"] .items .item {
+	display: inline-block;
+	opacity: 1;
+	pointer-events: auto;
+  width: 395px; /* de 397 a 395 rfc */
+	vertical-align: top; /* nuevo rfc */
+}
+.slider-wrap[data-slider="series"] .items .item:not(.active) { /* nuevo selector revision 7 */
+    /*top: 26px;*/
+	/*margin-top: 60px; anulo rfc */
+	margin-right: 22px;
+}
+
+.slider-wrap[data-slider="series"] .items .item.active {
+	/*padding-right: 677px; /*710px;*/
+	/*margin-top: 60px; anulo rfc */
+	margin-right: 26px; /* de 22 a 26 17846 */
+	transition-timing-function: ease-out forwards;
+	width: 1048px; /* de 1045 a 1054 17846 */
+}
+
+.slider-wrap[data-slider="series"] .items.extras .item.active {
+	padding-right: 0px!important;
+}
+.slider-wrap[data-slider="series"] .items.extras .item.active .item-text {
+	visibility : visible;
+}
+.slider-wrap[data-slider="series"] .items.extras .item.active {
+	/*top: 26px;*/
+	margin-top: 60px;
+	margin-right: 22px;
+}
+/* .slider-wrap[data-slider="series"] .items.extras .item .item-text,
+.slider-wrap[data-slider="series"] .items.extras .item.active .item-text {
+	position: absolute;
+	min-height: 58px;
+	margin-top: 5px;
+	font-family: var(--font-primary200);
+	font-weight: 300;
+	width: 395px;
+	font-size:30px;
+} */
+.slider-wrap[data-slider="series"] .items.extras .item.active .item-text .titulo.twolines,
+.slider-wrap[data-slider="series"] .items.extras .item.active .item-text .titulo-episodio,
+.slider-wrap[data-slider="series"] .items.extras .item.focused .item-text .titulo.twolines,
+.slider-wrap[data-slider="series"] .items.extras .item.focused .item-text .titulo-episodio  {
+	/* opacity: 1!important;
+	text-align: center;
+	font-size: 30px;
+	line-height: 36px;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	white-space: normal;
+	overflow: hidden;
+	max-height:72px;
+	/*-webkit-box-pack: center;
+	-webkit-box-align: center; anulo estilos para que coja genericos seccion */
+	opacity: 1;
+}
+
+
+.slider-wrap[data-slider="series"] .items .item .item-wrap {
+	pointer-events: none;
+	position: relative;
+	border: 5px solid transparent; /* de 5 a 6 mux 4, vuelvo a 5 */
+	border-radius: 10px; /* de 6 a 12 mux 4, paso de 12 a 10 */
+}
+
+.slider-wrap[data-slider="series"] .items .item.active .item-wrap {
+	width: 395px; /* de 397 a 395 */
+	overflow: hidden;
+}
+
+.hover_yes .slider-wrap[data-slider="series"] .items .item .item-wrap:hover{
+	border-color: #ffffff;
+	border-radius: 10px; /* de 6 a 12 mux 4, de 12 a 10 */
+}
+
+.slider-items:not(.active).slider-wrap[data-slider="series"] .items .item.focused .item-wrap{
+	border-color: var(--color-corporate);
+	border-radius: 10px; /* de 6 a 12 mux 4, de 12 a 10 */
+}
+
+.slider-wrap[data-slider=series] .items .item .item-wrap.disabled:after,
+.slider-wrap:not([data-slider=tabs]) .items .item.anim-overlay-50 + .item .item-wrap:not(.overlay-50).disabled:after{
+	content: " ";
+	z-index: 99;
+	display: block;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: rgba(22, 22, 22, 0.8);
+	border-color: transparent;
+}
+
+.slider-wrap[data-slider="series"] .items .item:not(.active) .item-wrap {
+	width: 395px; /* de 395 a 397 mux 4, de 397 a 395 rfc */
+}
+
+.slider-wrap[data-slider="series"] .items .item .item-text {
+	position: relative; /* de absolute a relative rfc */
+	min-height: 40px;
+	margin-top: 5px;
+	font-family: var(--font-primary200);
+	font-weight: 300; /* de 200 a 300 mux 4 */
+	width: 395px;
+	font-size:30px;
+}
+
+.slider-wrap[data-slider="series"] .items .item.active .item-text {
+	min-height:40px;
+	margin-top: 5px;
+	font-family: var(--font-primary200);
+	font-weight: 300; /* de 200 a 300 mux 4 */
+	width: 100%;
+	max-width: 395px;
+}
+
+.slider-wrap[data-slider="series"] .items .item.active .item-text { /* incluyo este selector para que en la transicion no se vea este texto */
+	visibility : hidden;
+}
+
+.slider-wrap[data-slider="series"] .items .item .item-text .titulo,
+.slider-wrap[data-slider="series"] .items .item .item-text .disponibilidad {
+	text-align: center;
+	font-size: 28px; /* de 25 a 28 mux 4 */
+	line-height: 32px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.slider-wrap[data-slider="series"] .items .item .item-text .titulo {
+	opacity: 0.6;
+}
+
+.slider-wrap[data-slider="series"] .items .item .item-text .titulo.twolines,
+.slider-wrap[data-slider="series"] .items .item .item-text .titulo-episodio {
+	text-align: center;
+	font-size: 28px;
+	line-height: 28px;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	white-space: normal;
+	overflow: hidden;
+	max-height: 64px;
+	-webkit-box-align: center;
+	opacity: 0.6;
+	padding-bottom: 2px;
+	margin-top: 3px;
+	transition: opacity .5s;
+	position: absolute;
+	width: 100%;
+}
+
+.slider-item:not(.active) .slider-wrap[data-slider="series"].episodio-ficha .items .item .item-text .titulo.twolines, .slider-item:not(.active) .slider-wrap[data-slider="series"].episodio-ficha .items .item:not(.active) .item-text .titulo-episodio {
+    opacity: 0;
+}
+
+.slider-wrap[data-slider="series"] .items .item.active .item-text .titulo.twolines,
+.slider-wrap[data-slider="series"] .items .item.active .item-text .titulo-episodio {
+	opacity: 0;
+}
+
+.slider-wrap[data-slider="series"] .items .item.active .item-wrap {
+	border-color: var(--color-corporate);
+	border-radius: 10px; /* de 6 a 12 mux 4, paso de 12 a 10 */
+}
+
+
+.hover_yes .slider-wrap[data-slider="series"] .items .item.active .item-wrap:hover {
+    border-color: #ffffff;
+	border-radius: 10px; /* de 6 a 12 mux 4, paso de 12 a 10  */
+}
+
+.slider-wrap[data-slider="series"] .items .item.active .item-text .disponibilidad {
+	text-align: center;
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.slider-wrap[data-slider="series"] .items .item .item-wrap .img-wrap .episodio {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+	font-weight: 300; /* 17845 de 200 a 300 */
+	font-size: 36px;
+	letter-spacing: 0px;
+	z-index: 9;
+}
+
+.slider-wrap[data-slider="series"] .items .item .item-wrap .img-wrap .recording_dot {
+	position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.slider-wrap[data-slider="series"] .items .item.active .item-wrap .img-wrap .recording_dot {
+	position: absolute;
+	top: 16px;
+  left: 16px;
+	letter-spacing: 0px;
+}
+
+.slider-wrap[data-slider="series"] .items .item[data-type="recording"] .item-wrap .img-wrap .recording_dot {
+  display: none;
+}
+
+.slider-wrap[data-slider="series"] .items .item .item-wrap {
+	overflow: hidden;
+}
+
+.slider-wrap[data-slider="series"] .items .item .item-wrap .img-wrap {
+	position: relative;
+	width: 385px;   /* 388px, a 385 */
+	height: 217px;  /* 219px, a 217 */
+	overflow: hidden;
+	background-clip: content-box;
+	border-radius: 5px;
+	background-color: rgba(25, 25, 25, 0.9); /* de padre a img-wrap wp */
+}
+
+/* especificos para los carouseles de series en ficha */
+.slider-wrap.episodio-ficha[data-slider="series"] .items .item .item-wrap .img-wrap:after {
+	content: "";
+    position: absolute;
+    width: 50%;
+    height: 90%;
+    background-image: -webkit-gradient(radial, left top, 0, left top, 644,color-stop(0, rgb(2, 0, 0)),color-stop(1, rgba(0, 0, 0, 0)));
+    background-image: -webkit-radial-gradient(left top, ellipse farthest-side,rgb(0, 0, 0) 0%,rgba(2, 0, 0, 0) 100%);
+    background-image: radial-gradient(ellipse farthest-side at left top,rgb(0, 0, 0) 0%,rgba(2, 0, 0, 0) 100%);
+}
+
+.slider-wrap.episodio-ficha[data-slider="series"] .items .item .item-wrap .img-wrap:before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 90%;
+    bottom: 0;
+    right: 0;
+    background-image: -webkit-gradient(radial, right bottom, 0, right bottom, 644,color-stop(0, rgb(2, 0, 0)),color-stop(1, rgba(2, 0, 0, 0)));
+    background-image: -webkit-radial-gradient(right bottom, ellipse farthest-side,rgb(2, 0, 0) 0%,rgba(2, 0, 0, 0) 100%);
+    background-image: radial-gradient(ellipse farthest-side at right bottom,rgb(2, 0, 0) 0%,rgba(2, 0, 0, 0) 100%);
+    z-index: 1;
+}
+
+.slider-wrap.episodio-ficha[data-slider="series"] .items .item .item-wrap .progress-bar .progress-bar-back .progress-bar-progress{
+	z-index: 10;
+}
+
+.slider-wrap[data-slider="series"] .episode-button .icon.icon-play-circle {
+    transform: rotate(-90deg) skewX(-30deg) scale(.2105,.1823);
+    left: -7px;
+    top: -7px;
+}
+
+.slider-wrap[data-slider="series"] .episode-button .icon.icon-play-circle, .slider-wrap[data-slider="series"] .episode-button .icon.icon-play-circle:after, .slider-wrap[data-slider="series"] .episode-button .icon.icon-play-circle:before {
+    position: relative;
+    border-color: #fff transparent transparent transparent;
+    border-top-right-radius: 25px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+}
+
+.slider-wrap[data-slider="series"] .episode-button .icon.icon-play-circle:after, .slider-wrap[data-slider="series"] .episode-button .icon.icon-play-circle:before {
+    position: absolute;
+    content: "";
+}
+
+.slider-wrap[data-slider="series"] .episode-button .icon.icon-play-circle:before {
+    transform: rotate( -135deg ) skewX( -45deg ) scale(1.414,.707) translate(0,-50%);
+}
+
+.slider-wrap[data-slider="series"] .episode-button .icon.icon-play-circle:after {
+    transform: rotate(135deg ) skewY( -45deg ) scale(.707,1.414) translate(50%);
+}
+
+.slider-wrap[data-slider="series"] .episode-button .icon.icon-rec-circle,
+.slider-wrap[data-slider="series"] .episode-button .icon.icon-cancelrec-circle,
+.slider-wrap[data-slider="series"] .episode-button .icon.icon-cancelrec-circle-filled
+{
+    width: 27px;
+    height: 27px;
+    border-radius: 13.5px;
+    background-color: red;
+    left: 0;
+    top: 0;
+    vertical-align: top;
+}
+
+.slider-wrap[data-slider="series"] .episode-button .icon.icon-rec-circle:before{
+	content: "";
+}
+
+.slider-wrap[data-slider="series"] .episode-button .icon.icon-rec-circle {
+    width: 27px;
+    height: 27px;
+    border-radius: 13.5px;
+    background-color: red;
+    left: 0;
+    top: 0;
+    vertical-align: top;
+}
+
+.slider-wrap[data-slider="series"] .episode-button .icon.icon-cancelrec-circle-filled:before, .slider-wrap[data-slider="series"] .episode-button .icon.icon-cancelrec-circle-filled:after, .slider-wrap[data-slider="series"] .episode-button .icon.icon-cancelrec-circle:before, .slider-wrap[data-slider="series"] .episode-button .icon.icon-cancelrec-circle:after {
+    content: "";
+    width: 15px;
+    height: 2px;
+    border: none;
+    background-color: #fff;
+    left: 6px;
+    top: 12.5px;
+    position: absolute;
+    color: transparent;
+}
+
+.slider-wrap[data-slider="series"] .episode-button .icon.icon-cancelrec-circle-filled:before, .slider-wrap[data-slider="series"] .episode-button .icon.icon-cancelrec-circle:before {
+    transform: rotate(-45deg);
+}
+
+.slider-wrap[data-slider="series"] .episode-button .icon.icon-cancelrec-circle-filled:after, .slider-wrap[data-slider="series"] .episode-button .icon.icon-cancelrec-circle:after {
+    transform: rotate(45deg);
+}
+
+
+
+
+
+/* END especificos para los carouseles de series en ficha */
+
+.slider-wrap[data-slider="series"] .items .item .item-wrap .img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.slider-wrap[data-slider="series"] .items .item .item-wrap .img.img-skeleton {
+	top: 50%;
+	left: 50%;
+	width: auto;
+	height: auto;
+
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.slider-wrap[data-slider="series"] .items .item .item-wrap .img-canal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	margin-top: -73px;
+}
+
+.slider-wrap[data-slider="series"] .items .item .item-wrap .img-canal.withbar{
+	margin-top:-112px;
+}
+
+.slider-wrap[data-slider="series"] .items .item.item-all .item-wrap img {
+	top: 50%;
+	left: 50%;
+	width: auto;
+	height: auto;
+
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.slider-wrap[data-slider="series"] .items .item.item-all .item-wrap.no-background .img-wrap {
+	background: none; /* quito !important mux 4 */
+}
+
+.series .slider-wrap[data-slider="series"] .items .item.item-all.moved .item-wrap img {
+	left: calc(100% - 41px); /* nuevo  calc(100% - 53px) para icono + mas visible */
+}
+
+.slider-wrap[data-slider="series"] .items .item .item-wrap .item-indicator {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display:none;
+}
+.slider-wrap[data-slider="series"] .items .item.item-all .item-wrap .item-indicator {
+	display: none;
+}
+.slider-wrap[data-slider="series"] .items .item.active .item-wrap .item-indicator {
+	transform: scale(1.2);
+	margin-right: 5px;
+}
+
+.slider-wrap[data-slider="series"] .items .item .item-wrap .item-indicator img {
+	width: 100%;
+	height: 100%;
+}
+
+.slider-wrap[data-slider="series"] .items .item .item-wrap .progress-bar {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+
+	padding: 12px 0px 12px; /* de 12 0 6 a 12 0 12 mux 4 */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(var(--palette-black)));
+    background-image: -webkit-linear-gradient(top, transparent 0%, var(--palette-black) 100%);
+    background-image: -o-linear-gradient(top, transparent 0%, var(--palette-black) 100%);
+    background-image: linear-gradient(-180deg, transparent 0%, var(--palette-black) 100%);
+	z-index: 15;
+}
+.slider-wrap[data-slider="series"] .items .item.item-all .item-wrap .progress-bar {
+	display: none;
+}
+
+.slider-wrap[data-slider="series"] .items .item .item-wrap .progress-bar .progress-bar-back {
+	position: relative;
+	margin: 10px;
+	height: 6px;
+}
+
+.slider-wrap[data-slider="series"] .items .item .item-wrap .progress-bar .progress-bar-back {
+	position: relative;
+	margin: 10px 23px; /* de 10px a 10px 23px mux 4 */
+	height: 7px;
+	overflow: hidden;
+	background: rgba(255, 255, 255, 0.36);
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	border-radius: 7px;
+}
+
+.slider-wrap[data-slider="series"] .items .item .item-wrap .progress-bar .progress-bar-back .progress-bar-progress {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background-color: #fff;
+
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-transition: background-color .3s ease;
+	-moz-transition: background-color .3s ease;
+	-o-transition: background-color .3s ease;
+	transition: background-color .3s ease;
+}
+
+.slider-wrap[data-slider="series"] .items .item.active .item-wrap .progress-bar .progress-bar-back .progress-bar-progress {
+	background-color: #fff;
+}
+
+.slider-wrap[data-slider="series"] .items-desc {
+	position: absolute;
+	top: 0; /* de 60 a 0 rfc */
+	left: 548px;
+	width: 621px;
+	opacity: 0;
+	pointer-events: none;
+	transition: none;
+	height: 229px;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .state-item { 
+    position: absolute;
+    bottom: 0;
+	width: 100%;
+}
+
+.details-view .slider-wrap[data-slider="series"] .items-desc {
+    width: 557px;
+	top: 56px;
+}
+
+.details-slider-comp .slider-item ~ .slider-item:last-child .slider-wrap[data-slider="series"] .items-desc{
+    width: 621px; /* diferente de temporadas a similares width sinopsis */
+}
+
+.details-view .slider-wrap[data-slider="series"] .items .item.active {
+    width: 993px;
+}
+
+.details-slider-comp .slider-item ~ .slider-item:last-child .slider-wrap[data-slider="series"] .items .item.active {
+    width: 1057px; /* diferente de temporadas a similares width sinopsis */
+}
+
+.slider-wrap[data-slider="series"] .items-desc .ntemps {
+  text-align: center;
+  color: #333;
+  font-weight: normal;
+  display: inline-block;
+  font-size: 28px;
+  height: 34px;
+  padding-left: 7px;
+  padding-right: 8px;
+  background: white;
+  text-shadow: none;
+  vertical-align: 1px;
+  border-radius: 30px;
+  min-width: 34px;
+  font-weight: 500;
+}
+
+.slider-wrap[data-slider="series"] .items-desc.active {
+	opacity: 1!important;
+	left: 565px; /* de 573 569 17846 */
+	transition-timing-function: ease-out forwards;
+}
+
+.slider-wrap[data-slider="series"] .desc-item.item-all {
+	margin-top: 40px;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-title {
+	margin: 0;
+	line-height: 1.2;
+	font-weight: 300;
+	font-size: 44px;
+	letter-spacing: 0; /* de -1.1px a 0 mux 4 */
+	white-space: nowrap;
+	width: fit-content;
+}
+
+.slider-wrap[data-slider="series"] .desc-item.item-all .item-title {
+	color: #fff;
+	white-space: normal;
+	font-family: var(--font-primary200);
+	font-style: normal;
+	font-weight: 300;
+	font-size: 36px;
+	line-height: 36px; /* de cambio en line-height, cambio font a work Sans, letter-spacing y font-weight mux 4 */
+	letter-spacing: initial;
+}
+
+.slider-wrap[data-slider="series"] .desc-item.item-all .item-title .title2 {
+	color: var(--color-corporate);
+	margin: 0;
+	width: fit-content;
+
+	font-family: var(--font-primary200);
+	font-style: normal;
+	font-weight: 200;
+	letter-spacing: -1px;
+	font-size: 58px;
+	line-height: 63px; /* de 58 a 63 para no cortar la letra g */
+	letter-spacing: initial; /* de cambio en line-height de 68 a 58, cambio font a work Sans, letter-spacing y font-weight mux 4 */
+	-webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    letter-spacing: -2px;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-info {
+	font-size: 30px;
+	font-weight: 300;
+	padding-bottom: 15px;
+}
+
+.slider-wrap[data-slider="series"] .desc-item.item-all .item-info {
+	display: none;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-info .item-info-icons {
+	display: inline-block;
+	vertical-align: bottom;
+	position: relative;
+  margin-right: 4px;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-info .item-info-icons .item-icon{
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-info .item-info-elem {
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 24px;
+	position: relative;
+	letter-spacing: -0.7px;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-info .item-info-elem:last-child {
+    padding-right: 0;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-info .item-info-elem .item-rating {
+    margin-top: -1px;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-info .item-info-elem .item-rating .icon-rating {
+	display: none;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-info .item-info-elem .item-precio {
+	font-weight: var(--font-weight500);
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-info .item-info-elem .item-genre { /* selector nuevo para revision 6 */
+	text-transform: lowercase;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-info .item-info-elem .item-genre:first-letter{ /* selector nuevo para revision 6 */
+	text-transform: uppercase;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-info .item-info-elem.hide {
+	display: none!important;
+}
+
+/* .slider-wrap[data-slider="series"] .desc-item .item-info .item-info-icons:after {
+	content: "|";
+	position: absolute;
+	top: 4.5px;
+	bottom: 0;
+	right: -16px;
+	transform: scaleY(0.8);
+	opacity: 0.4;
+} */
+
+.slider-wrap[data-slider="series"] .desc-item .item-info .item-info-icons.item-no-separator {
+	padding-right: 3px;
+}
+
+
+.slider-wrap[data-slider="series"] .desc-item .item-info .item-info-elem:after {
+	content: "|";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 5px; /* de 7 a 5 mux 4 */
+	transform: scaleY(0.8); /* nuevos mux 4 */
+	opacity: 0.4;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-info .item-info-elem.item-no-separator {
+	padding-right: 3px;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-info .item-info-elem.item-no-separator:after,
+.slider-wrap[data-slider="series"] .desc-item .item-info .item-info-elem:last-child:after {
+	content: none;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-progress.hide {
+	display: none!important;
+}
+.slider-wrap[data-slider="series"] .desc-item .item-emision.hide {
+	display: none!important;
+}
+.slider-wrap[data-slider="series"] .desc-item .item-fechaemision.hide {
+	display: none!important;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-description {
+	font-size: 29px; /* de 30 a 29 mux 4 */
+	font-weight: 300; /* de 200 a 300 mux 4 */
+	letter-spacing: 0px; /* de 1.12 a 0 mux 4 */
+	margin: 0;
+	line-height: 30px; /* de 32px a 30px en 17486 */
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	box-orient: vertical;
+	line-clamp: 4;
+	box-sizing: border-box;
+	max-height: 128px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.details-slider-comp .slider-wrap[data-slider="series"] .desc-item .item-description {
+    line-height: 31px;
+	margin-top: 10px;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-description.twolines {
+	font-size: 30px;
+	font-weight: 300;
+	letter-spacing: 1.12px;
+	margin: 0;
+	line-height: 32;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	box-orient: vertical;
+	line-clamp: 2;
+	box-sizing: border-box;
+	max-height: 64px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.slider-wrap[data-slider="series"] .desc-item.item-all .item-description {
+	display: none;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-emision {
+	/*top: 153px;  anulo grab.*/
+    font-size: 1.875rem;
+    font-weight: 300; /* de 200 a 300 mux 4 */
+    letter-spacing: 0px; /* de 1 a 0 mux 4 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+	margin-bottom: 11px;
+}
+
+.slider-wrap[data-slider=series] .desc-item .item-emision > div {
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+}
+
+.slider-wrap[data-slider="series"] .desc-item.recording .item-emision {
+	top: 130px; /* de 150 a 153 mux 4 al incluir grabaciones paso a 130 */
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-progress ~ .item-emision { /* nuevo reajustes 14886 */
+    top: 133px;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .recording_dot {
+	margin-right: 10px;
+	margin-bottom:4px;
+}
+
+.slider-wrap[data-slider="series"] .desc-item.item-all .item-emision {
+	display:none;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-emision .bolder{
+	font-weight: 500; /* de normal a 500 mux 4 */
+}
+
+.slider-wrap[data-slider="series"] .desc-item .thiner{
+	font-weight: 200!important;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-fechaemision {
+	/*top: 197px; /* de 205 a 203 mux 4 , de 203 a 197 para mux 4.1 anulo grabaciones */
+    font-size: 1.75rem; /* de 1.875 a 1.75 mux 4 */
+	font-weight: 300; /* de 200 a 300 mux 4 */
+	letter-spacing: 0px; /* de 1 a 0 mux 4 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.slider-wrap[data-slider="series"] .desc-item.item-all .item-fechaemision {
+	display:none;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-progress {
+	position: relative; 
+	font-size: 1.75rem;
+	font-weight: 300; /* de 200 a 300 mux 4 */
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-progress.hide {
+	display: none!important;
+}
+.slider-wrap[data-slider="series"] .desc-item .item-emision.hide {
+	display: none!important;
+}
+.slider-wrap[data-slider="series"] .desc-item .item-fechaemision.hide {
+	display: none!important;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-progress .item-startTime {
+	float: left;
+	margin-top: 12px; /* de margin bottom a margin-top para revision 5 */
+}
+.slider-wrap[data-slider="series"] .desc-item .item-progress .item-endTime {
+	float: right;
+	margin-top: 12px; /* de margin bottom a margin-top para revision 5 */
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-progress .item-progressbar {
+	clear: both;
+	position: relative;
+	width: 615px;
+	height: 10px;
+	overflow: hidden;
+	background: rgba(255, 255, 255, 0.36);
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	-o-border-radius: 9px;
+	border-radius: 9px;
+}
+
+.slider-wrap[data-slider="series"] .desc-item .item-progress .item-progressbar > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	/*background-color: var(--color-corporate);*/
+    background-color: white;
+
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-transition: background-color .3s ease;
+	-moz-transition: background-color .3s ease;
+	-o-transition: background-color .3s ease;
+	transition: background-color .3s ease;
+}
+
+.slider-wrap[data-slider="series"]  .item-emision .icon.icon-u7d {
+    margin-right: 10px;
+    vertical-align: -5px;
+}
+
+.slider-wrap[data-slider="series"] .episode-button {
+	opacity: 0;
+	position: absolute;
+	top: 119px;
+	left: 151.5px;
+    width: 94px;
+	height: 94px;
+	pointer-events: none;
+	transition: none;
+	font-size: 81px;
+	background-color: rgba(255,255,255,0.36);
+    border-radius: 47px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	display: -webkit-flex;
+}
+
+.slider-wrap[data-slider="series"] .episode-button .icon.icon-euro-circle {
+    width: 66px;
+    height: 66px;
+    overflow: hidden;
+    border-radius: 33px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.slider-wrap[data-slider="series"] .episode-button .icon-euro-circle:before,
+.slider-wrap[data-slider="series"] .episode-button .icon-19:before{
+    position: absolute;
+    left: -8px;
+    top: -10px;
+}
+
+.icon-euro-circle:before, .icon-19:before {
+    content: "\e921";
+}
+
+.slider-wrap[data-slider="series"] .episode-button .icon {
+	position: relative;
+}
+
+.slider-wrap[data-slider="series"] .episode-button .icon {
+  font-size: 5.125rem;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .desc-item .item-info {
+	position: absolute;
+	top: 190px;
+	font-size: 28px;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .desc-item .item-info .item-info-elem.item-no-separator {
+    padding-right: 0px!important;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .desc-item .item-description {
+	-webkit-line-clamp: 4;
+	line-clamp: 4;
+	max-height: 158px;
+	font-size: 30px;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .items .item.active .item-text {
+	visibility : visible;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .items .item.active .item-text .titulo.twolines,
+.slider-wrap[data-slider="series"].episodio-ficha .items .item.active .item-text .titulo-episodio {
+	opacity: 1;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .items .item .item-wrap .progress-bar{
+	padding: 10px 0px 10px;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .items .item .item-text .titulo.twolines, .slider-wrap[data-slider="series"].episodio-ficha .items .item .item-text .titulo-episodio {
+    font-size: 30px;
+}
+
+.details-slider-comp .slider-wrap[data-slider=series] .items .item .item-text{
+	min-height: 58px;
+}
+.slider-wrap[data-slider=series].episodio-ficha .items .item .item-text .titulo.twolines, .slider-wrap[data-slider=series].episodio-ficha .items .item .item-text .titulo-episodio{
+	margin-top: 0;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;
+    display: -webkit-flex;*/
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .desc-item .episodio-status {
+	position: absolute;
+	top: 180px;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .desc-item .episodio-status .bolder{
+	font-weight: 400;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .desc-item .ef-status {
+	display: inline-block;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .desc-item .ef-status .item-separator{
+    position: relative;
+    padding-right: 20px;
+    margin-right: 20px;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .desc-item .ef-status .item-separator:after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    height: 24px;
+    border-right: 2px solid rgba(255, 255, 255, 0.4);
+    right: 0;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .desc-item .ef-progress {
+	font-size: 1.75rem;
+	font-weight: 300;
+	display: inline-block;
+	width: 420px;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .desc-item .ef-progress .ef-item {
+	display: inline-block;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .desc-item .ef-progress.hide {
+	display: none!important;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .desc-item .ef-progress .ef-startTime {
+	float: left;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .desc-item .ef-progress .ef-endTime {
+	float: right;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .desc-item .ef-progress .ef-progressbar {
+	clear: both;
+	position: relative;
+	width: 220px;
+	height: 9px;
+	left: 22px;
+	top: -3px;
+	overflow: hidden;
+	background: rgba(255, 255, 255, 0.36);
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	-o-border-radius: 9px;
+	border-radius: 9px;
+}
+
+.slider-wrap[data-slider="series"].episodio-ficha .desc-item .ef-progress .ef-progressbar > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background-color: white;
+
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-transition: background-color 0.3s ease;
+	-moz-transition: background-color 0.3s ease;
+	-o-transition: background-color 0.3s ease;
+	transition: background-color 0.3s ease;
+}
+
+/* Grabaciones (data-type="Recordings") */
+
+.slider-wrap[data-slider="series"] .items .item.rec-scheduled[data-type="recording"] .item-wrap:before {
+	/* transform: rotate(36deg);
+    background: #FFFFFF;
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 190%;
+    left: -60px;
+    top: -90px;
+    background: repeating-linear-gradient(90deg, rgba(2,42,42,1) 0px, rgba(42,42,42,1) 6px, var(--palette-black) 6px, var(--palette-black) 10px);
+    opacity: 0.7;
+    z-index: 1; por estilos */
+
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url("../../../images/recording/capa_oscurece_no-disp.png");
+    z-index: 1;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
