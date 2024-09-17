@@ -1,0 +1,33 @@
+/* stylelint-disable selector-class-pattern */
+
+.view-transition-overlay {
+  --overlay-bg-color: var(--palette-black);
+  --overlay-initial-opacity: 1;
+  --overlay-final-opacity: 1;
+  --overlay-duration: 0.5s;
+  --overlay-z-index: 200;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-bg-color);
+  z-index: var(--overlay-z-index);
+  opacity: var(--overlay-initial-opacity);
+  transition: opacity linear var(--overlay-duration);
+}
+
+.view-transition-overlay--active {
+  opacity: var(--overlay-final-opacity);
+}
+
+.view-transition-overlay .view-transition-overlay__content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.view-transition-overlay .view-transition-overlay__content .loader.active {
+  opacity: var(--overlay-final-opacity);
+}
