@@ -8,11 +8,7 @@ export const appParamsData = {
    */
   N_SLIDERS_LOADED: 6,
 
-  /**
-   *  Num. máx de elementos en calles de canales
-   */
-  N_MAX_CHANNELS: 20,
-
+  
   /**
    *  Num. máx de elementos en calles carrusel_horizontal y carrusel_vertical
    */
@@ -33,11 +29,7 @@ export const appParamsData = {
    */
   N_MIN_CIRCULAR_VERTICAL: 8,
 
-  /**
-   *  Num. mínimo de elementos para hacer carrusel horizontal circular
-   */
-  N_MIN_CIRCULAR_CANALES: 10,
-
+  
   /**
    *  Num. mínimo de elementos para hacer el carrousel nodes circular
    */
@@ -101,11 +93,6 @@ export const appParamsData = {
    *  Num. de milisegundos autoplay trailer
    */
   MS_AUTOPLAY_TRAILER: 1000,
-
-  /**
-   *  Num. de milisegundos autoplay calle canales
-   */
-  MS_AUTOPLAY_CH: 1000,
 
   /**
    *  Num. de milisegundos autoplay calle vod
@@ -301,11 +288,7 @@ export const appParamsData = {
    */
   MS_DESC_ANIMAR_TITULO: 2000,
 
-  /**
-   *  Milisegundos de espera para mostrar detalle del elemento seleccionado en EPG
-   */
-  MS_EPG_DETALLE: 300,
-
+  
   /**
    * Habilita que se oculte el tooltip de acciones tras el tiempo definido en MS_TOOLTIP_HIDE
    */
@@ -320,18 +303,6 @@ export const appParamsData = {
    *  Milisegundos para hacer aparecer el tooltip
    */
   MS_TOOLTIP_SHOW: 500,
-
-  /**
-   *  Usamos la epg antigua
-   */
-  EPG_OLD: false,
-
-  /**
-   * Flag para mostrar/ocultar los canales de tipo application (Netflix, Amazon,
-   * Clic, etc.). ¡Importante! si los canales están como "hidden:true" seguirán
-   * ocultos.
-   */
-  SHOW_CANALES_NO_LINEALES: true,
 
   /**
    *  Milisegundos para ocultar player, siempre que no recibamos el parámetro "timerHideMinivod" del Context
@@ -394,13 +365,7 @@ export const appParamsData = {
 
   
   ES_STANDBY: "AutoStandBy",
-  ES_PIPI: "PiP",
-  ES_M360: "M360",
-  ES_CATCHUP: "Catchup",
-  ES_CDVR: "CDVR",
-  ES_STARTOVER: "StartOver",
-  ES_STARTOVERPLUS: "StartOverPlus",
-
+  
   /**
    * INCIDENCE_MODE = '' o cualquier otro valor genera la llamada a servicio
    * INCIDENCE_MODE = '1' fuerza el modo incidencia
@@ -428,53 +393,6 @@ export const appParamsData = {
    */
   SPLASH_DELAY: 5000,
 
-  M360: {
-    /**
-     *  Comprobación de mensajes en entorno emulador (chrome)
-     */
-    EMULATOR: false,
-
-    /**
-     *  Número de horas máximas que los dispositivos enlazados por M360 pueden aparecer en los listados
-     */
-    MAXIMUM_HOURS_LINKED_DEVICES: 24,
-
-    /**
-     *  Número máximo de dispositivos enlazados
-     */
-    MAX_STORED_DEVICES: 10,
-
-    /**
-     *  Código de valor del servicio Lanzar y Ver en el array de servicios disponibles en el InitData
-     */
-    SERVICE_M360: "209",
-
-    /**
-     *  Define si utilizamos Base64 para codificar/decodificar los mensajes que se pasan el dispositivo móvil y el STB
-     */
-    USING_B64_DESERIALIZE: true,
-
-    /**
-     *  Define la entrada de configuracion m360 para almacenar el array de dispositivos enlazados
-     */
-    STORAGE_ID: "m360Devices",
-
-    /**
-     *  Define el intervalo de marcado de evt 75 para m360 (por defecto, 5 minutos expresado en ms)
-     */
-    INTERVAL_MARCADO: 300000,
-
-    /**
-     *  muestra Lanzar y Ver en settings, independientemente de la configuración de DIM. Con valor false, muestra el valor que tenga configurado en DIM
-     */
-    FORCE_SHOW_M360_IN_SETTINGS: false,
-  },
-
-  /**
-   *  Flag para incorporar el testipaddress a las llamadas de FAU que lo necesiten
-   */
-  TEST_IP_ADDRESS: false,
-
   //	----------
   //	AUDIOS
   //	----------
@@ -484,15 +402,5 @@ export const appParamsData = {
    */
   AUDIO_MODE: "AUTO",
 
-  PERFILES: {
-    /**
-     *  Habilitamos el uso del componente lateral de idioma
-     */
-    ENABLED_LANGUAGE_COMPONENT: false,
-
-    /**
-     *  Idioma asociado al perfil por defecto si no está disponible el componente lateral de idioma
-     */
-    DEFAULT_LANGUAGE_CODE: "spa",
-  },
+   
 };
