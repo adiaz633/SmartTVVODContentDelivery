@@ -1,0 +1,302 @@
+.player-actions-comp {
+  opacity: 0;
+  position: absolute;
+  top: 960px; /* de 938 a 960 aj1, de 966 a 960 rvp */
+  left: 142px;
+  width: 1636px;
+  height: 100px;
+  display: inline-block;
+  text-align: center;
+  transition: transform .4s ease-out;
+}
+
+.player-actions-comp:not(.desc) { /* desc son los iconos secundarios */
+  z-index: 99;
+}
+
+.player-actions-comp.desc {
+  top: 937px;
+}
+.player-view.live .player-actions-comp.desc {
+  top: 861px;
+}
+
+.player-view.live .player-actions-comp.desc .button[command=pip_derecha],
+.player-view.live .player-actions-comp.desc .button[command=pip_izquierda],
+.player-view.live .player-actions-comp.desc .button[command=pip_quitar],
+.player-view.live .player-actions-comp.desc .button[command=pip_switch_izquierda],
+.player-view.live .player-actions-comp.desc .button[command=pip_switch_derecha] {
+  padding-top: 44px; /* separación extra con tooltip */
+  top: -44px; /* altura iconos menu PIP */
+  width: 96px;
+}
+
+.player-view.live .player-actions-comp.desc .button[command=pip_derecha] {
+  /*margin-right: 10px;  margenes icono PIP */
+}
+
+.player-view.live .player-actions-comp.desc .button[command=pip_izquierda] {
+  /* margin-left: 10px; margenes icono PIP */
+}
+
+
+.player-view.live .player-actions-comp.desc .button {
+  width: 100px;
+}
+
+.player-actions-comp .player-action {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.player-actions-comp .button {
+  width: 120px;
+  height: 80px;
+  margin-left: 0;
+  position: relative;
+}
+
+.player-actions-comp .button.disabled {
+  opacity: 0.25!important;
+  pointer-events: none!important;
+}
+
+.player-actions-comp .button[command="ver_inicio"] {
+  margin-top: 3px;
+}
+
+.player-actions-comp .button .icon {
+  font-size: 23px;
+  padding: 2px;
+  pointer-events: auto;
+}
+
+.player-actions-comp:not(.desc) .button .icon.icon-pip, .player-actions-comp:not(.desc) .button .icon.icon-no-pip {
+  font-size: 41px;
+  top: -2px;
+  position: relative;
+}
+
+.player-actions-comp.desc .button .icon {
+  font-size: 46px;
+}
+
+.player-actions-comp.desc .button .icon.icon-play {
+  font-size: 31px;
+}
+
+.player-actions-comp.desc .button .icon.icon-del-favoritos {
+  font-size: 32px;
+}.player-actions-comp:not(.desc) .button .icon.icon-del-favoritos {
+  font-size: 37px;
+}
+
+.player-actions-comp.desc .button .icon.icon-add-favoritos {
+  font-size: 32px;
+}.player-actions-comp:not(.desc) .button .icon.icon-add-favoritos {
+  font-size: 37px;
+}
+
+.player-actions-comp .button .icon.icon-episodios {
+  font-size: 44px;
+}
+
+.player-actions-comp.desc .button .icon.icon-ver-inicio {
+  font-size: 22px;
+}.player-actions-comp:not(.desc) .button .icon.icon-ver-inicio {
+  font-size: 26px;
+}
+
+.player-actions-comp .button .icon.icon-autio-subs {
+  font-size: 40px;
+}
+
+.player-actions-comp .button .icon.icon-relacionados {
+  font-size: 42px;
+}
+
+.icon.icon-180 {
+  transform: rotate(180deg);
+  margin-top: 5px;
+}
+
+.player-actions-comp .button.active .icon {
+  color: var(--color-corporate);
+  font-weight: bold;
+}
+
+.hover_yes .player-actions-comp .button .icon:hover {
+  color: #ffffff;
+  transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+}
+
+.player-actions-comp .button[command=grabar] .icon-rec-circle::before,
+.player-actions-comp .button[command=dejardegrabar] .icon-cancelrec-circle::before {
+  content: none;
+}
+
+.player-actions-comp .button[command = "grabar"] .icon,
+.player-actions-comp .button[command = "dejardegrabar"] .icon{
+  font-size: 36px;
+  border: 3px solid #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+.player-actions-comp .button[command=grabar].active .icon, .player-actions-comp .button[command=dejardegrabar].active .icon {
+  border: 3px solid var(--color-corporate);
+}
+
+.player-actions-comp .player-action .button[command="grabar"],
+.player-actions-comp .player-action .button[command = "dejardegrabar"] {
+
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+}
+
+.player-actions-comp .button .rec_dot {
+  width: 18px;
+  height: 18px;
+  background: red;
+  margin-top: 10.5px;
+  /*margin-left: 51.2px; */
+  border-radius: 18px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: -webkit-flex;
+}
+
+.player-actions-comp .button[command = "dejardegrabar"] .rec_dot:after, .player-actions-comp .button[command = "dejardegrabar"] .rec_dot:before {
+  content: "";
+  border: 1px solid #fff;
+  width: 10px;
+  border-radius: 1px;
+  background-color: #fff;
+  box-sizing: border-box;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.player-actions-comp .button[command = "dejardegrabar"] .rec_dot:before {
+  position: absolute;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+}
+
+.player-actions-comp .icon.icon-cancelrec-circle {
+  position: relative;
+}
+
+.player-actions-comp .tooltip .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #ccc;
+  color: #006080;
+}
+
+.player-actions-comp .tooltip {
+  position: absolute;
+  background-color:rgba(50,50,50,0.9);
+  color: #fff;
+  text-align: center;
+  margin-top: -29px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity .6s ease-out;
+  font-family: var(--font-primary200);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 38px;
+  letter-spacing: -1px;
+  border-radius: 5px;
+  white-space: nowrap;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, .9);
+}
+
+.player-actions-comp.desc .tooltip {
+  margin-left: 2px;
+}
+
+.player-actions-comp .tooltip.up {
+  margin-top: -165px;
+}
+
+.player-actions-comp .tooltip.active {
+  opacity: 1;
+}
+
+.player-actions-comp .tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: calc(100% - 8px);
+  left: 50%;
+  margin-left: 0px; /* de 12.25 a 0   */
+  width: 14.5px;
+  height: 14.5px;
+  background: linear-gradient(135deg, rgba(255,255,255,0) 50%, rgba(50,50,50,0.8) 50%);
+  border-radius: 0 0 2px 0;
+  transform: translate(-50%, 0) rotate(225deg);
+  -webkit-transform: translate(-50%, 0) rotate(225deg);
+  -moz-transform: translate(-50%, 0) rotate(225deg);
+  -ms-transform: translate(-50%, 0) rotate(225deg);
+  -o-transform: translate(-50%, 0) rotate(225deg);
+}
+
+.player-actions-comp .tooltip.up::after {
+  top: calc(100% - 8px);
+  background: linear-gradient(135deg, rgba(255,255,255,0) 50%, rgba(50,50,50,0.8) 50%);
+  margin-left: 0;
+  transform: translate(-50%, 0) rotate(45deg);
+  -webkit-transform: translate(-50%, 0) rotate(45deg);
+  -moz-transform: translate(-50%, 0) rotate(45deg);
+  -ms-transform: translate(-50%, 0) rotate(45deg);
+  -o-transform: translate(-50%, 0) rotate(45deg);
+}
+
+.player-actions-comp .tooltip .gray-text {
+  padding: 10px 17px;
+  display: inline-block;
+}
+
+.player-actions-comp .tooltip:not(.up) .gray-text {
+  font-size: 24px;
+  padding: 3.5px 17px;
+}
+
+.player-actions-comp .pip {
+  position: absolute;
+  width: 504px;
+  height: 341px;
+  left: 1274px;
+  top: 77px;
+
+  background: var(--palette-black);
+  border-radius: 9px;
+  display: none;
+}
+
+.player-actions-comp .pip .channel {
+  font-family: var(--font-primary200);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: #FFFFFF;
+}

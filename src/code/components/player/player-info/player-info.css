@@ -1,0 +1,545 @@
+.player-info-comp {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 1920px;
+  height: 1080px;
+}
+
+.player-info-comp .programs {
+  /*transition: transform .6s ease-out;*/
+  white-space: nowrap;
+  opacity: 1;
+}
+
+.player-info-comp .programs.hide{
+  opacity: 0;
+  display: block;
+}
+
+.player-info-comp .programs .content_info {
+  /*transition: transform .4s ease-out;*/
+  opacity: 0;
+  position: relative;
+  top: 681px!important; /* de 658 a 681 mientras no se modifique por JS */
+  width: 604px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top; /*nuevo rvp */
+  height: 211px;
+}
+
+.player-info-comp .programs .content_info.disabled .content_info-div .titulo,
+.player-info-comp .programs .content_info.disabled .content_info-div .subtitulo,
+.player-info-comp .programs .content_info.disabled .content_info-div .item-info,
+.player-info-comp .programs .content_info.disabled .content_info-div .hours {
+	opacity: 0.25!important;
+	pointer-events: none!important;
+}
+
+.player-info-comp:not(.in-programs) .programs .content_info .content_info-div {
+    position: absolute;
+    bottom: 75.5px;
+    width: 100%;
+}
+
+.player-info-comp .programs .content_info.show-sinopsis {
+    transform: translate3d(0px, 0px, 0px)!important; /* mientras no se modifique por JS ahora el valor es -57 */
+}
+
+.player-info-comp:not(.in-programs) .programs .content_info {
+  left: 560px;
+  width: 800px;
+}
+
+.player-info-comp .programs .content_info.transitory {
+	left: 658px;
+	width: 604px;
+  }
+
+  .player-info-comp .programs .content_info.transitory .titulo.twolines { /* para texto OK 3PA */
+    font-size: 30px;
+}
+
+.player-info-comp.in-programs .programs .content_info:not(:first-child):not(.show-main)::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  left: 0px;
+  height: 87px;
+  background: rgba(255, 255, 255, 0.36);
+  top: 60px;
+}
+.player-info-comp .programs .content_info::before {
+  content: none;
+}
+
+.player-info-comp .programs .content_info .titulo {
+	font-family: var(--font-primary200);
+	font-style: normal;
+	font-weight: 500;
+	font-size: 34px; /* de 43 a 34 rvp */
+	line-height: 36px;  /*  36 line-height correcta con diseño */
+	letter-spacing: -1px;
+  color: white;
+  width: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0px 65px;
+}
+
+.player-info-comp:not(.in-programs) .programs .content_info .titulo {
+    font-size: 43px;
+    padding: 0;
+    line-height: 48px;
+    margin-bottom: 7px;
+}
+
+.player-info-comp:not(.in-programs) .programs .content_info .subtitulo {
+    line-height: 32px;
+    margin-bottom: 10px;
+}
+
+.player-info-comp .programs .content_info .titulo.twolines {
+	-webkit-line-clamp: 2;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	white-space: normal;
+	overflow: hidden;
+	-webkit-box-align: center;
+  max-height: 90px;
+    position: relative;
+    bottom: 0;
+    line-height: 48px; /* 36 line-height correcta con diseño, paso a 41 diseno copy 89 */
+}
+
+.player-info-comp:not(.in-programs) .programs .content_info .titulo.twolines {
+    height: 90px;
+	margin-bottom: 0;
+	align-items: flex-end;
+}
+
+.player-info-comp:not(.in-programs) .programs .content_info .titulo:not(twolines) {
+    margin-bottom: 4px;
+}
+
+.player-info-comp .programs .content_info .titulo.twolines {
+	display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+	height: 77px;
+}
+
+.player-info-comp .programs .content_info .subtitulo {
+	font-family: var(--font-primary200);
+	font-style: normal;
+	font-weight: 400;
+	font-size: 28px; /* de 30 a 28 rvp */
+	line-height: 41px;
+	letter-spacing: -1px;
+  color: white;
+  width: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0px 65px;
+  opacity: 0;
+}
+
+.player-info-comp .programs .content_info .item-info {
+	font-size: 26px;
+	font-weight: 300;
+	margin-top: 0; /*nuevo, de 7 a 0 en canales live */
+}
+.player-info-comp .programs .content_info.current .item-info {
+	padding-bottom: 29px;
+}
+
+.player-info-comp .programs .content_info .item-info-element {
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 30px; /* de 32 a 30 rvp*/
+	position: relative;
+}
+
+.player-info-comp .programs .content_info .item-info-element.iconos {
+    padding-right: 4px; /* nuevo rvp */
+	padding-right: 30px;
+}
+
+.player-view .content_info .item-info .icon-dolby,
+.player-view .content_info .item-info .icon-atmos,
+.player-view .content_info .item-info .icon-dolbyplus{
+    background: transparent !important;
+}
+
+.player-view .content_info .item-info .icon-dolby:before {
+    font-size: 20px;
+}
+
+.player-view .player-info-comp .programs .content_info .icon.icon-dolbyplus,
+.player-view .player-info-comp .programs .content_info .icon.icon-atmos {
+    margin-top: -3px;
+}
+
+.player-info-comp .programs .content_info .item-info-element .ntemps {
+	width: 36px;
+	text-align: center;
+	margin-right: 10px;
+	margin-left: -38px;
+	color: #333;
+	font-weight: normal;
+	display: inline-block;
+	font-size: 28px;
+	height: 36px;
+	padding: 0;
+	background: transparent;
+	text-shadow: none;
+	vertical-align: 1px;
+}
+
+.player-info-comp .programs .content_info .item-info-element + .item-info-element:not(.iconos) {
+	/* nuevo selector para revision */
+	text-shadow: 0 0 0.3em var(--palette-black);
+}
+
+.player-info-comp .programs .content_info .item-info-element:after {
+	content: '';
+    position: absolute;
+    top: 7px;
+    bottom: 0;
+    right: 16px;
+    height: 20px; /* de 24 a 20 rvp */
+    border-right: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.player-info-comp .programs .content_info .item-info-element.iconos:after {
+	margin-top: 3px;
+}
+
+.player-info-comp .programs .content_info .item-info-element.iconos:after {
+	content: none;
+	content: "";
+    margin-top: 0;
+}
+
+.player-info-comp .programs .content_info .item-info-element:last-child {
+	padding-right: 0;
+	text-transform: lowercase;
+}
+
+.player-info-comp .programs .content_info .item-info-element:last-child:first-letter {
+	text-transform: uppercase;
+}
+
+.player-info-comp .programs .content_info .item-info-element:last-child:after {
+	content: none;
+}
+
+.player-info-comp .programs .content_info .item-rating {
+	margin-top: 3px;
+}
+
+.player-info-comp .programs .content_info .item-rating .icon {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 8px;
+	margin-top: -8px;
+}
+.player-info-comp .programs .content_info .item-info-element .rec_dot {
+  width: 22px;
+  height: 22px;
+  background: red;
+  margin-top: 6px;
+  margin-left: 29.5px;
+  border-radius: 18px;
+}
+
+.player-info-comp .programs .content_info .simple-button.more-button {
+  background-color: transparent;
+  border: 3px solid #fff;
+  border-radius: 25px;
+  padding: 0px 5px 13px 7px;
+  line-height: 9px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 3px;
+  opacity: 0;
+  margin: 22px auto 0; /* de 10 a 22 canales live rvp */
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.player-info-comp .programs .content_info .simple-button.more-button .button-text{
+	font-weight: 800;
+}
+
+.player-info-comp .programs .content_info.active .simple-button.more-button {
+  background-color: var(--color-corporate);
+  outline: none;
+  border-color: var(--color-corporate);
+}
+
+.player-info-comp .programs .content_info .simple-button.more-button.u7d-epg {
+  background-color: transparent;
+  border: none;
+  padding: 0px 7px 12px 9px;
+  line-height: 10px;
+  font-size: 42px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 3px;
+  opacity: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+
+.player-info-comp .programs .content_info .simple-button.more-button.u7d-epg .icon.icon-mainmenu-u7d{
+	width: 58px;
+}
+
+.player-info-comp .programs .content_info.active .simple-button.more-button.u7d-epg {
+  color: var(--color-corporate);
+}
+
+.player-info-comp .programs .content_info .simple-button.more-button.u7d-epg .icon-mainmenu-recdot{
+  margin-left: 0; // para ajuste en carrusel live de player
+}
+
+
+
+.player-info-comp .content_arrow {
+  position: absolute;
+	top: 834px; /* aj1 de 810 a 834 */
+	left: 142px;
+	width: 1636px;
+	display: inline-block;
+	text-align: center;
+}
+
+.player-info-comp .content_arrow .icon_desc {
+	transition: transform .4s ease-out;
+  font-size: 13px; /* de 19 a 13 rvp */
+	font-weight: 600;
+	color: #ffffff;
+}
+
+.player-info-comp.in-programs .content_arrow .icon_desc {
+	font-size: 18px; /* nuevo rvp */
+}
+
+.player-info-comp .content_arrow.active .icon_desc {
+	color: var(--color-corporate);
+}
+
+.player-info-comp .content_desc {
+	transition: opacity .4s ease-out;
+	opacity: 0;
+	padding-bottom: 0;
+	font-size: 28px;
+	font-weight: 300;
+	letter-spacing: 0.02em;
+	margin: 0;
+	line-height: 30px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	box-orient: vertical;
+	box-sizing: border-box;
+	max-height: 3.9em;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: #FFF;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+	text-align: center;
+	margin: 615px auto 0; /* de 600px auto 0 a 615px auto 0 para VOD */
+	width: 1323px; /* de 780 a 1323 rvp, a tener en cuenta que es para VOD, para episodios sera ancho de 780 */
+	-webkit-line-clamp: 2;
+	line-clamp: 2; /* de 3 a 2 para VOD, lo mismo 3 sera para episodios */
+}
+
+.player-view.live .player-info-comp .content_desc {
+	margin-top: 695px; /* de 700 a 695 */
+	width: 780px; /* de 780 a 1323 rvp, a tener en cuenta que es para VOD, para episodios sera ancho de 780 */
+	-webkit-line-clamp: 3;
+	line-clamp: 3; /* de 3 a 2 para VOD, lo mismo 3 sera para episodios */
+}
+
+.player-view.live .player-info-comp:not(.in-programs) .content_desc {
+    opacity: 0 !important; /* para mejora de la animacion */
+}
+
+.player-info-comp .progress-bar {
+	transition: transform .4s ease-out;
+	position: absolute;
+	top: 862px; /* ajst1 de 840 a 862 */
+	width: 100%;
+}
+.player-info-comp.in-programs .progress-bar {
+	top: 819px; /* de 837 a 819 canal live rvp */
+}
+
+
+
+.player-info-comp .progress-bar .time {
+	text-align: center;
+	font-size: 24px; /* de 26 a 24 rvp */
+	color: white;
+	font-weight: 300;
+	display: inline-block;
+	position: absolute;
+	width: 120px;
+	top: 25px; /* de 27 a 25 rvp */
+	font-size: 26px;
+    font-family: var(--font-primary200);
+}
+.player-info-comp.in-programs .progress-bar .time {
+  top: -11px;
+}
+
+.player-info-comp .progress-bar .time.time_current {
+	left: 200px; /* de 156 a 200 y alinea a left rvp */
+    text-align: left; /* de right a left */
+}
+.player-info-comp.in-programs .progress-bar .time.time_current {
+	left: 722px; /* de 700 a 722 in-programs implica canales live rvp */
+}
+
+.player-info-comp .progress-bar .time.time_left {
+	right: 200px; /* cambio left por right 200 rvp */
+    text-align: right; /* de left a right */
+}
+.player-info-comp.in-programs .progress-bar .time.time_left {
+	left: 1128px; /* de 1100 a 1128 in-programs implica canales live 1128 */
+	text-align: left; /* nuevo especifico para in-programs */
+}
+
+.player-info-comp .progress-bar .time.time_2live {
+	top: 25px;
+	opacity: 0;
+	display: none; /* Ocultado por producto en este player */
+}
+
+.player-info-comp .progress-bar .progress-bar-back {
+	position: relative;
+	height: 10px;
+	overflow: hidden;
+	width: 1204px; /* de 1225 a 1268, a 1204 rvp */
+	/*left: 365px; */
+	top: 35px;
+	background: rgba(255, 255, 255, 0.36);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	margin: 0 auto;
+	background: rgb(0,0,0);
+	background: -moz-linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(255,255,255,0.36) 10%, rgba(255,255,255,0.36) 90%, rgba(0,0,0,0) 90%);
+	background: -webkit-linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(255,255,255,0.36) 10%, rgba(255,255,255,0.36) 90%, rgba(0,0,0,0) 90%);
+	background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(255,255,255,0.36) 10%, rgba(255,255,255,0.36) 90%, rgba(0,0,0,0) 90%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
+.player-info-comp.in-programs .progress-bar .progress-bar-back {
+  top: 0px;
+  width: 290px; /* de 250 a 290 rvp */
+  height: 7px;
+}
+
+.player-info-comp .progress-bar .progress-bar-back .progress-bar-progress {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background-color: #fff;
+	z-index: 9;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-transition: background-color .3s ease;
+	-moz-transition: background-color .3s ease;
+	-o-transition: background-color .3s ease;
+	transition: background-color .3s ease;
+}
+
+.player-info-comp .progress-bar .progress-bar-back .thumbs-progress {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background-color: #ffffff;
+	opacity: 0.38;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-transition: background-color .3s ease;
+	-moz-transition: background-color .3s ease;
+	-o-transition: background-color .3s ease;
+	transition: background-color .3s ease;
+}
+.player-info-comp .progress-bar.active .progress-bar-back .thumbs-progress {
+	background-color: var(--color-corporate);
+	height: 8px;
+    margin-top: 1px;
+}
+.player-info-comp.in-programs .progress-bar.active .progress-bar-back .thumbs-progress {
+	background-color: #ffffff;
+	opacity: 0.38;
+	height: 8px;
+    margin-top: 1px;
+}
+
+.player-info-comp .progress-bar.active .progress-bar-back .progress-bar-progress {
+	background-color: var(--color-corporate);
+	min-width: 10px;
+}
+.player-info-comp.in-programs .progress-bar.active .progress-bar-back .progress-bar-progress {
+	background-color: #ffffff;
+}
+
+.player-info-comp .progress-bar.active .progress-bar-back .progress-bar-progress.publi,
+.player-info-comp .progress-bar .progress-bar-back .progress-bar-progress.publi {
+	background-color: #FFD200;
+}
+
+.player-info-comp .publi_text {
+  position: absolute;
+  transition: opacity .4s ease-out;
+  font-size: 22px;
+  color: #FFF;
+  text-align: center;
+  left: 50%;
+	top: 957px;
+	border: 2px solid #fff;
+	padding: 0px;
+	width: 138px;
+	height: 38px;
+	line-height: 36px;
+	border-radius: 2px;
+	font-weight: 300;
+	letter-spacing: -0.5px;
+	transform: translate(-50%, 0);
+}
+
+.player-info-comp .programs .content_info .hours {
+  opacity: 0;
+  text-align: center;
+  font-size: 26px;
+  color: white;
+  font-weight: 300;
+}
+
+.player-info-comp.in-programs .programs .content_info .hours {
+    margin-top: 17px;
+	font-size: 24px;
+}

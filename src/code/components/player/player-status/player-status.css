@@ -1,0 +1,102 @@
+.player-status-comp {
+  top: 501px;
+  left: 832px;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+}
+
+.player-status-comp.ffwrwd {
+  left: 869px;
+  top: 750px;
+  width: auto;
+}
+
+.player-status-comp .player_status_icon {
+  display:inline-block;
+}
+
+.player-status-comp .player_status_icon .icon {
+  font-size: 76px;
+  width: 250px;
+}
+
+.player-status-comp .player_status_icon .icon.icon-pause {
+  font-size: 76px;
+}
+
+.player-status-comp .player_status_icon .icon.icon-play {
+  font-size: 65px;
+  margin-top: 7px;
+  padding-left: 18px;
+}
+.player-status-comp.ffwrwd .player_status_icon .icon {
+  font-size: 38px;
+  width: 49px;
+  color: rgba(255, 255, 255, 0.36);
+}
+
+.player-status-comp.ffwrwd .player_status_icon .icon.active {
+  color: #ffffff;
+}
+
+.player-status-comp.ffwrwd .player_status_icon .icon.rewind {
+  transform: rotate(180deg);
+}
+
+.player-status-comp .player_status_icon .icon.icon-pause {
+  padding-left: 6px;
+}
+
+.player-status-comp .player_status_icon .icon.icon-rewind {
+  padding-right: 25px;
+}
+
+.player-status-comp.ffwrwd .player_status_icon .icon.icon-play {
+  padding-left: 18px;
+  width: auto;
+}
+
+.player-status-comp .player_status_icon .icon:not(.rewind).icon-play:first-child {
+  padding: 0;
+}
+
+.player-status-comp .player_status_icon .icon.icon-play.rewind:last-child {
+  padding: 0;
+}
+
+.player-status-comp .player_status_icon .icon.icon-forward {
+  padding-left: 25px;
+}
+
+.player-status-comp .player_status_icon .icon.icon-scroller-ffx,
+.player-status-comp .player_status_icon .icon.icon-scroller-rwx {
+  height: 125px;
+  width: 250px;
+  font-family: var(--font-primary200);
+  font-style: normal;
+  color: #FFF;
+  font-size: 57px;
+  padding-top: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.player-status-comp .player_status_icon .icon.icon-scroller-ffx {
+  background-image: url(./../../../../images/player_icoFWD.svg);
+}
+
+.player-status-comp .player_status_icon .icon.icon-scroller-rwx {
+  background-image: url(./../../../../images/player_icoRWD.svg);
+}
+
+.player-status-comp .units {
+  font-family: var(--font-primary200);
+  display: block;
+  font-size: 27px;
+  font-weight: 500;
+  margin-top: 15px;
+  text-align: center;
+  z-index: 100;
+  position: relative;
+}

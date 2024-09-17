@@ -1,0 +1,181 @@
+.player-audio-sub-comp {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    pointer-events:auto;
+    z-index: 1;
+    display: none;
+}
+
+.player-audio-sub-comp .player_idioma {
+    position: absolute;
+    top: 723px;
+    width: inherit;
+    height: 150px;
+}
+
+.player-audio-sub-comp .player_subtitulo {
+    position: absolute;
+    top: 855px;
+    width: inherit;
+    height: 150px;
+}
+
+.player-view :not(.back-up) .tv-back {
+    bottom: 50px;
+}
+
+.player-view .player-message {
+    text-align: center;
+    font-weight: 300;
+    font-family: var(--font-primary200);
+    font-size: 26px;
+    margin: 0 0;
+    position: absolute;
+    bottom: 130px;
+    width: 100%;
+	z-index: 100;
+	color: rgba(255,255,255,.6);
+    width: 720px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.player-view .player-message.pip {
+    text-align: center;
+    font-weight: 300;
+    font-family: var(--font-primary200);
+    font-size: 26px;
+    margin: 0 0;
+    position: absolute;
+    bottom: 130px;
+    width: 100%;
+	z-index: 100;
+	color: rgba(255,255,255,.6);
+    width: 720px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.player-audio-sub-comp .player_subtitulo .titulo_subs {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 300;
+    color: rgba(255,255,255,.65);
+    letter-spacing: -1px;
+}
+
+.player-audio-sub-comp .player_idioma .titulo_idiomas {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 300;
+    color: rgba(255,255,255,.65);
+    letter-spacing: -1px;
+}
+
+.player-audio-sub-comp .items {
+    display: inline-block;
+    width: inherit;
+    height: auto;
+    text-align: center;
+    margin-top: 7px;
+}
+
+.player-audio-sub-comp .items .item {
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+    padding: 0 40px 0 0; /* de 0 40px a 0 40px 0 0 */
+    height: 64px;
+    align-items: center;
+    color: #fff;
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+    vertical-align: middle;
+    font-weight: 200;
+    text-align: center;
+    line-height: 64px; /* line height de 1 a 64px */
+    letter-spacing: 1px;
+    font-size: 1.75rem;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px; /* de 5 a 6 mux 4 */
+    font-size: 0;
+    padding: 0;
+}
+
+.player-audio-sub-comp .items .item:first-child{
+    margin-left: 0;
+}
+
+.player-audio-sub-comp .items .item.active {
+    color: var(--color-corporate);
+}
+
+.hover_yes .player-audio-sub-comp .items .item:hover {
+    -webkit-box-shadow:inset 0px 0px 0px 2px #ffffff;	transform: scale(1.15);
+    -moz-box-shadow:inset 0px 0px 0px 2px #ffffff;	transform: scale(1.15);
+    box-shadow:inset 0px 0px 0px 2px #ffffff;	transform: scale(1.15);
+}
+
+.player-audio-sub-comp .items .item .icon {
+    line-height: 64px;
+    opacity:0.2;
+}
+.player-audio-sub-comp .items .item .icon {
+    opacity:1;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 3px solid rgba(216, 216, 216, .31);
+    box-sizing: border-box;
+    position: relative;
+}
+
+.player-audio-sub-comp .items .item.active .icon, .player-audio-sub-comp .items .item.active .item_txt {
+    border-color: var(--color-corporate);
+    color: var(--color-corporate);
+}
+
+.player-audio-sub-comp .items .item .icon.icon-circle-filled:before, .player-audio-sub-comp .items .item .icon.icon-95:before {
+    content: none;
+}
+
+.player-audio-sub-comp .items .item.mark .icon-circle-filled:before, .player-audio-sub-comp .items .item.mark .icon-95:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.player-audio-sub-comp .items .item.mark.active .icon-circle-filled:before, .player-audio-sub-comp .items .item.mark.active .icon-95:before {
+    background-color: var(--color-corporate);
+}
+
+.player-audio-sub-comp .items .item.mark .icon {
+    color:white;
+    opacity:1;
+    border-color: #fff;
+}
+.player-audio-sub-comp .items .item.mark.active .icon {
+    color: var(--color-corporate);
+    opacity:1;
+    border-color: var(--color-corporate);
+}
+
+.player-audio-sub-comp .items .item .item_txt {
+    display: inline-block;
+    vertical-align: middle;
+    color: rgba(255,255,255,.8);
+    font-weight: 300;
+    font-size: 1.75rem;
+    margin-left: 12px;
+    letter-spacing: -1px;
+}
