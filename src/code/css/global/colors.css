@@ -1,0 +1,12 @@
+
+:root {
+     /* Palette */
+    --palette-white: #FFFFFF;
+    --palette-black: #000000;
+    --palette-blue: #019BF4;
+
+     /* Colors */
+    --color-background: var(--palette-black);
+    --color-font: var(--palette-white);
+    --color-corporate: var(--palette-blue);
+}
