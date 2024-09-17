@@ -29,23 +29,11 @@ export const appConfigData = {
     param: CONFIG_ENV.SIGNATURE_KEY,
   },
 
-  REMOTE_MITO: CONFIG_ENV.REMOTE_MITO, // IP del STB para llamadas a mito
-
-  // AUDIENCIAS DEBUG
-  DEBUG_AUDIENCES: false,
-
-  MAQUETA: true, // utiliza usuarios de maqueta
-
   AKS_DEV: false,
 
   FAUMODELDEVICE: true, // modelo de consulta de BackEnd de dispositivos FAU
 
-  /**
-   * Bandera que verifica que las EP/3PA esten activas. Para activarlo en el archivo
-   * .env se debe colocar expresamente la palabra **_true_**
-   */
-  IS_EP_3PA_ACTIVE: CONFIG_ENV.IS_EP_3PA_ACTIVE === "true",
-
+  
   // Control de Teclado
 
   /**
