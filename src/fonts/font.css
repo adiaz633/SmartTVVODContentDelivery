@@ -1,0 +1,18 @@
+
+/*
+ICONS NUEVOS
+*/
+
+@font-face {
+	font-family: "icomoon";
+	src: url("./icomoon.eot");
+	/* IE9 Compat Modes */
+	src: url("./icomoon.eot?#iefihgx") format("embedded-opentype"), url("./icomoon.woff?dfg") format("woff"), url("./icomoon.ttf?dfgh") format("truetype"), url("./icomoon.svg#icomoon?sgsg") format("svg");
+	/* Legacy iOS */
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal; }
+
+:root {
+	--main-mvstr-color: #019BF4;
+}
