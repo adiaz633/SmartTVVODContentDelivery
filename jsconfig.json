@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "paths": {
+      "@unirlib/*": [
+        "src/unirlib/*"
+      ],
+      "@newPath/*": [
+        "src/code/*"
+      ],
+      "@vendorPath/*": [
+        "vendor/*"
+      ],
+      "@appConfig": [
+        "src/config"
+      ],
+      "@locales/*": [
+        "src/locales/*"
+      ],
+      "@svgImagesFolder/*": [
+        "src/images/svgs/*"
+      ],
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "./types/*.d.ts",
+    "./src/**/*",
+    "./scripts/**/*",
+    "./commands/**/*"
+  ]
+}
